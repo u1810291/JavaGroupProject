@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="225.0" layoutY="3.0" text="Library of INHA University">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="576.0" layoutY="5.0" prefHeight="17.0" prefWidth="13.0" style="-fx-background-color: #ff0000;" text="X">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="556.0" layoutY="5.0" prefHeight="17.0" prefWidth="13.0" style="-fx-background-color: #b3cccc; -fx-border-width: 0px 0px 2px 0px;" text="_">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children></HBox>
+      <Pane layoutY="26.0" prefHeight="374.0" prefWidth="600.0" style="-fx-background-color: #0099cc;">
+         <children>
+            <VBox layoutX="303.0" layoutY="27.0" prefHeight="302.0" prefWidth="271.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-background-insets: 0;">
+               <children>
+                  <Pane prefHeight="41.0" prefWidth="271.0">
+                     <children>
+                        <Label layoutX="112.0" layoutY="7.0" text="Login">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <HBox prefHeight="40.0" prefWidth="207.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <TextField promptText="Username" style="-fx-background-color: transparent; -fx-prompt-text-fill: black;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="207.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <children>
+                        <PasswordField promptText="Password" style="-fx-background-color: transparent; -fx-prompt-text-fill: black;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding></PasswordField>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="107.0" prefWidth="271.0">
+                     <children>
+                        <Button layoutX="46.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="68.0" style="-fx-background-radius: 8; -fx-background-color: #F4D03F;" text="Login" textAlignment="CENTER" />
+                        <Button accessibleRole="CHECK_BOX" alignment="CENTER" layoutX="155.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: red; -fx-background-radius: 8;" text="Sign In" />
+                     </children>
+                  </Pane>
+               </children></VBox>
+            <ImageView fitHeight="225.0" fitWidth="241.0" layoutX="28.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image_2019-04-11_17-42-35.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
