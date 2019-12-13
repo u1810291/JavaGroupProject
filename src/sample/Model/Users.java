@@ -3,7 +3,8 @@ package sample.Model;
 
 public class Users {
     private int user_id;
-    private String name, surname, email, phone, address, login, password;
+    private long phone;
+    private String name, surname, email, address, login, password;
     public String getPassword() {
         return password;
     }
@@ -22,10 +23,10 @@ public class Users {
     public void setAddress(String address) {
         this.address = address;
     }
-    public String getPhone() {
+    public long getPhone() {
         return phone;
     }
-    public void setPhone(String phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
     public String getEmail() {
