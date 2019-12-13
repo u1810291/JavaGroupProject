@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="283.0" prefWidth="366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox layoutY="-4.0" prefHeight="27.0" prefWidth="365.0">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #0099cc;" BorderPane.alignment="CENTER">
          <children>
-            <Pane prefHeight="27.0" prefWidth="372.0" style="-fx-background-color: #D7DBDD;">
-               <children>
-                  <Label alignment="BOTTOM_CENTER" layoutX="160.0" layoutY="1.0" prefHeight="25.0" prefWidth="53.0" text="Librarian">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font></Label>
-               </children>
-            </Pane>
+            <ImageView fitHeight="187.0" fitWidth="179.0" layoutX="61.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: red;">
+               <image>
+                  <Image url="@school-student-icon-18.png" />
+               </image></ImageView>
+            <Button layoutX="125.0" layoutY="308.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Student" />
          </children>
-      </HBox>
-      <HBox layoutX="25.0" layoutY="74.0" prefHeight="134.0" prefWidth="124.0" style="-fx-background-radius: 10;" styleClass="btn_star" stylesheets="@style.css" />
-      <HBox layoutX="220.0" layoutY="74.0" prefHeight="134.0" prefWidth="124.0" style="-fx-background-radius: 10; -fx-background-color: #0099cc;" />
-   </children>
-</AnchorPane>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="196.0" fitWidth="179.0" layoutX="61.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@book-icon-1.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="121.0" layoutY="301.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #0099cc;" text="Book" textFill="#f2f1f1" />
+         </children></AnchorPane>
+   </right>
+</BorderPane>

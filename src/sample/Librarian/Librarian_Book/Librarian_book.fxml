@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <TableView layoutY="38.0" prefHeight="344.0" prefWidth="770.0">
-        <columns>
-          <TableColumn prefWidth="84.20001375675201" text="Tittle" />
-          <TableColumn prefWidth="89.39998626708984" text="Status" />
-            <TableColumn prefWidth="88.39996337890625" text="Subject" />
-            <TableColumn prefWidth="100.39999389648438" text="Authtor" />
-            <TableColumn prefWidth="116.79998779296875" text="ISBN" />
-            <TableColumn prefWidth="131.19998168945312" text="Publish Date" />
-            <TableColumn prefWidth="76.79998779296875" text="Delete" />
-            <TableColumn prefWidth="81.39996337890625" text="Edit" />
-        </columns>
-      </TableView>
-      <Button layoutX="685.0" layoutY="396.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-radius: 8; -fx-background-color: red;" text="Save" />
-      <Button layoutX="608.0" layoutY="396.0" mnemonicParsing="false" style="-fx-background-radius: 8; -fx-background-color: #F4D03F;" text="Previous" />
-   </children>
-</Pane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="83.19996148347855" text="Title" />
+                <TableColumn prefWidth="67.20001983642578" text="Status" />
+                <TableColumn prefWidth="75.0" text="Subject" />
+                <TableColumn prefWidth="75.0" text="Author" />
+                <TableColumn prefWidth="75.0" text="ISBN" />
+                <TableColumn prefWidth="114.59994506835938" text="Publish Date" />
+                <TableColumn prefWidth="78.79998779296875" text="Edit" />
+                <TableColumn prefWidth="79.5999755859375" text="Delete" />
+            </columns>
+            <BorderPane.margin>
+                <Insets left="25.0" right="25.0" top="25.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+    <bottom>
+        <Pane prefHeight="47.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="615.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #F4D03F;" text="Previous" />
+            </children></Pane>
+    </bottom>
+</BorderPane>

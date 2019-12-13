@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
-   <bottom>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="673.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-background-radius: 8; -fx-background-color: red;" text="Save" />
-            <Button layoutX="600.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-radius: 8; -fx-background-color: #F4D03F;" text="Previous" />
-         </children>
-      </Pane>
-   </bottom>
-   <top>
-      <TableView fx:id="table_info" prefHeight="394.0" prefWidth="658.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn fx:id="col_id" prefWidth="84.4000107049942" text="ID" />
-          <TableColumn fx:id="col_name" prefWidth="155.59996795654297" text="Name" />
-            <TableColumn fx:id="col_email" prefWidth="157.39999389648438" text="Surname" />
-            <TableColumn fx:id="col_notes" prefWidth="179.40005493164062" text="Email" />
-            <TableColumn fx:id="col_update" prefWidth="98.4000244140625" text="Delete" />
-            <TableColumn fx:id="col_update1" prefWidth="97.5999755859375" text="Edit" />
-        </columns>
-      </TableView>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="670.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <TableView prefHeight="344.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="160.20000000000005" text="Name" />
+                <TableColumn prefWidth="121.99998474121094" text="Surname" />
+                <TableColumn prefWidth="180.0" text="Email" />
+                <TableColumn prefWidth="85.5999755859375" text="Edit" />
+                <TableColumn prefWidth="73.60003662109375" text="Delete" />
+            </columns>
+            <BorderPane.margin>
+                <Insets left="25.0" right="25.0" top="25.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+    <bottom>
+        <Pane prefHeight="47.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="568.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #F4D03F;" text="Previous" />
+            </children></Pane>
+    </bottom>
 </BorderPane>

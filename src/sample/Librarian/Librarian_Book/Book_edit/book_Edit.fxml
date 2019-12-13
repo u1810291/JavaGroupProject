@@ -1,36 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Librarian.Librarian_Book.Book_edit.BookEdit">
-   <children>
-      <Pane prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: white;">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="670.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn prefWidth="115.20001447200775" text="C1" />
+            <TableColumn prefWidth="113.20000457763672" text="C2" />
+            <TableColumn prefWidth="122.4000244140625" text="C2" />
+            <TableColumn prefWidth="125.79998779296875" text="C2" />
+            <TableColumn prefWidth="136.59994506835938" text="C2" />
+         </columns>
+         <BorderPane.margin>
+            <Insets left="30.0" right="30.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <Pane prefHeight="145.0" prefWidth="670.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="228.0" layoutY="6.0" text="Library Managment System">
+            <TextField alignment="CENTER" layoutX="261.0" layoutY="60.0" promptText="Title" />
+            <TextField alignment="CENTER" layoutX="261.0" layoutY="97.0" promptText="Status" />
+            <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="74.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image_2019-04-11_17-42-35.png" />
+               </image></ImageView>
+            <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="488.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image_2019-04-11_17-42-35.png" />
+               </image></ImageView>
+            <Label layoutX="312.0" layoutY="20.0" text="Books" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Button layoutX="574.0" layoutY="3.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="23.0" style="-fx-background-color: red; -fx-border-radius: 0;" text="X">
-               <font>
-                  <Font size="10.0" />
-               </font>
-            </Button>
-            <Button layoutX="544.0" layoutY="3.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="23.0" style="-fx-background-color: yellow;" text="+">
-               <font>
-                  <Font size="10.0" />
-               </font>
-            </Button>
-            <Button layoutX="514.0" layoutY="3.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="23.0" style="-fx-background-color: MediumSeaGreen;" text="_">
-               <font>
-                  <Font size="10.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
-   </children>
-</AnchorPane>
+         </children></Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="40.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="579.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #F4D03F;" text="Previous" />
+         </children></Pane>
+   </bottom>
+</BorderPane>
