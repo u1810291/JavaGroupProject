@@ -55,7 +55,7 @@
                </children></VBox>
             <ImageView fitHeight="225.0" fitWidth="241.0" layoutX="28.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@RegisterImages/image_2019-04-11_17-42-35.png" />
+                  <Image url="@image_2019-04-11_17-42-35.png" />
                </image>
             </ImageView>
          </children>

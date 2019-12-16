@@ -10,7 +10,7 @@
          <children>
             <ImageView fitHeight="187.0" fitWidth="179.0" layoutX="61.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: red;">
                <image>
-                  <Image url="@school-student-icon-18.png" />
+                  <Image url="@/sample/View/LibrarianView/BookImages/image_2019-04-11_17-42-35.png" />
                </image></ImageView>
             <Button layoutX="125.0" layoutY="308.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Student" />
          </children>
@@ -21,7 +21,7 @@
          <children>
             <ImageView fitHeight="196.0" fitWidth="179.0" layoutX="61.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@book-icon-1.png" />
+                  <Image url="@" />
                </image>
             </ImageView>
             <Button layoutX="121.0" layoutY="301.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #0099cc;" text="Book" textFill="#f2f1f1" />
