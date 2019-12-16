@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login.LoginControllerB">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LoginRegister.LoginControllerB">
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0099cc;">
          <children>
@@ -55,7 +55,7 @@
                </children></VBox>
             <ImageView fitHeight="225.0" fitWidth="241.0" layoutX="28.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image_2019-04-11_17-42-35.png" />
+                  <Image url="@RegisterImages/image_2019-04-11_17-42-35.png" />
                </image>
             </ImageView>
          </children>

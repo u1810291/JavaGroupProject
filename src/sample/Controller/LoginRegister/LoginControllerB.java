@@ -1,16 +1,10 @@
-package sample.Login;
+package sample.Controller.LoginRegister;
 
-import com.sun.javafx.fxml.FXMLLoaderHelper;
-import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.util.FXPermission;
-import sample.Librarian.Librarian;
-import sample.Main;
 
 import javax.swing.*;
 

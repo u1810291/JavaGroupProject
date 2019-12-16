@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
+<?import javafx.scene.text.Font?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="670.0" style="-fx-background-color: #0099cc;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -28,11 +28,11 @@
             <TextField alignment="CENTER" layoutX="261.0" layoutY="97.0" promptText="Status" />
             <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="74.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image_2019-04-11_17-42-35.png" />
+                  <Image url="@../LibrarianView/BookImages/image_2019-04-11_17-42-35.png" />
                </image></ImageView>
             <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="488.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image_2019-04-11_17-42-35.png" />
+                  <Image url="@../LibrarianView/BookImages/image_2019-04-11_17-42-35.png" />
                </image></ImageView>
             <Label layoutX="312.0" layoutY="20.0" text="Books" textFill="WHITE">
                <font>

@@ -9,7 +9,7 @@ public class Main extends Application {
 
 //    @Override
 //    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("Register/sample.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("Register/Register.fxml"));
 //        primaryStage.setTitle("Hello World");
 //        primaryStage.setScene(new Scene(root, 600, 400));
 //        primaryStage.show();
@@ -17,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Login/LoginController.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("View/RegisterView/LoginController.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
@@ -25,28 +25,28 @@ public class Main extends Application {
 
 //    @Override
 //    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("Librarian_student/LibrarianStudent.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("Librarian_student/Students.fxml"));
 //        primaryStage.setTitle("Hello World");
 //        primaryStage.setScene(new Scene(root, 600, 400));
 //        primaryStage.show();
 //    }
 //    @Override
 //    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("Librarian_student/LibrarianStudent.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("Librarian_student/Students.fxml"));
 //        primaryStage.setTitle("Hello World");
 //        primaryStage.setScene(new Scene(root, 600, 400));
 //        primaryStage.show();
 //    }
 //    @Override
 //    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("Librarian/Librarian_student/LibrarianStudent.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("Librarian/Librarian_student/Students.fxml"));
 //        primaryStage.setTitle("Hello World");
 //        primaryStage.setScene(new Scene(root, 600, 400));
 //        primaryStage.show();
 //    }
 //    @Override
 //    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("Register/sample.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("Register/Register.fxml"));
 //        primaryStage.setTitle("Hello World");
 //        primaryStage.setScene(new Scene(root, 600, 400));
 //        primaryStage.show();
@@ -59,12 +59,3 @@ public class Main extends Application {
     }
 }
 
-class Libra extends Application{
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Librarian/LibrarianBar.fxml"));
-        primaryStage.setTitle("Librarian table");
-        primaryStage.setScene(new Scene(root, 366, 283));
-        primaryStage.show();
-    }
-}

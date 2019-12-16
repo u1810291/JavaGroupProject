@@ -1,4 +1,4 @@
-package sample.Register;
+package sample.Controller.LoginRegister;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -7,7 +7,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import sample.Model.Users;
 
-import javax.crypto.spec.PSource;
 import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
