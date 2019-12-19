@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AdminControl">
+   <children>
+      <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
+         <image>
+            <Image url="@../images/student_change.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="logout" layoutX="557.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="81.0" prefWidth="99.0" text="logout" />
+      <Button fx:id="studentBack" layoutX="170.0" layoutY="72.0" mnemonicParsing="false" onAction="#studentBackHandler" prefHeight="87.0" prefWidth="108.0" text="back" />
+      <TableView layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
+        <columns>
+          <TableColumn prefWidth="93.0" text="full name" />
+          <TableColumn prefWidth="91.0" text="email" />
+            <TableColumn prefWidth="81.0" text="password" />
+            <TableColumn prefWidth="89.0" text="id" />
+            <TableColumn prefWidth="109.0" text="date of birth" />
+            <TableColumn prefWidth="71.0" text="add" />
+            <TableColumn prefWidth="68.0" text="edit" />
+            <TableColumn prefWidth="78.0" text="delete" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

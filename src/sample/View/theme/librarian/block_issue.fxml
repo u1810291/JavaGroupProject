@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LibrarianControl">
+   <children>
+      <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
+         <image>
+            <Image url="@../images/book.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="logout" layoutX="557.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="81.0" prefWidth="99.0" text="logout">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="blockBack" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="70.0" mnemonicParsing="false" onAction="#backButton" opacity="0.26" prefHeight="88.0" prefWidth="99.0" style="-fx-background-radius: 100;" text="back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <VBox layoutX="110.0" layoutY="217.0" prefHeight="305.0" prefWidth="243.0" spacing="10.0">
+         <children>
+            <TextField fx:id="issueReason" prefHeight="39.0" prefWidth="243.0" promptText="Reason for issuing a fine" />
+            <TextField fx:id="issueIdOfStudent" prefHeight="37.0" prefWidth="243.0" promptText="id of student" />
+            <DatePicker fx:id="dateFine" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="select return date">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </DatePicker>
+            <Button fx:id="issueFine" mnemonicParsing="false" onAction="#issueFineHandler" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #cc3300;" text="issue" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <Text layoutX="110.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue a fine" wrappingWidth="242.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <VBox layoutX="497.0" layoutY="220.0" prefHeight="299.0" prefWidth="243.0" spacing="10.0">
+         <children>
+            <TextField fx:id="reasonOfBlocking" prefHeight="39.0" prefWidth="243.0" promptText="Reason for blocking a student" />
+            <TextField fx:id="idOfStudent" prefHeight="37.0" prefWidth="243.0" promptText="id of student" />
+            <DatePicker fx:id="blockStudent" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="select return date">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </DatePicker>
+            <Button fx:id="issueBlock" mnemonicParsing="false" onAction="#issueBlockHandler" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #cc3300;" text="block" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <Text layoutX="498.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="block a student" wrappingWidth="242.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

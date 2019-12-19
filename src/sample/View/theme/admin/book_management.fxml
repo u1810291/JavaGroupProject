@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AdminControl">
+   <children>
+      <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
+         <image>
+            <Image url="@../images/book.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="557.0" layoutY="75.0" mnemonicParsing="false" opacity="0.26" prefHeight="81.0" prefWidth="99.0" text="logout" />
+      <Button fx:id="back" alignment="BOTTOM_LEFT" layoutX="179.0" layoutY="72.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.26" prefHeight="87.0" prefWidth="99.0" text="back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TableView layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
+        <columns>
+          <TableColumn prefWidth="93.0" text="title" />
+          <TableColumn prefWidth="91.0" text="subject" />
+            <TableColumn prefWidth="81.0" text="author" />
+            <TableColumn prefWidth="89.0" text="ISBN" />
+            <TableColumn prefWidth="109.0" text="publish date" />
+            <TableColumn prefWidth="71.0" text="add" />
+            <TableColumn prefWidth="68.0" text="edit" />
+            <TableColumn prefWidth="78.0" text="delete" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,66 +1,42 @@
 package sample;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class Main extends Application {
-//It has some errors make sure that I resolved it before running this code
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("/sample/View/EditsViews/Librarians.fxml"));
-//        primaryStage.setTitle("Librarians List");
-//        primaryStage.setScene(new Scene(root, 600, 400));
-//        primaryStage.show();
-//    }
-//Until here
-
-
-
-
-
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("View/RegisterView/Login.fxml"));
-//        primaryStage.setTitle("Login");
-//        primaryStage.setScene(new Scene(root, 600, 400));
-//        primaryStage.show();
-//    }
-
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("/sample/View/EditsViews/Students.fxml"));
-//        primaryStage.setTitle("Students list");
-//        primaryStage.setScene(new Scene(root, 600, 400));
-//        primaryStage.show();
-//    }
+//    final String SELECT_QUERY = "SELECT * FROM TITLES";
+//    Statement stmt = null;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/View/EditsViews/StudentEdit.fxml"));
-        primaryStage.setTitle("Student Edit");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        primaryStage.setTitle("Login");
+        primaryStage.setScene(new Scene(root, 550, 400));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("Librarian/Librarian_student/Students.fxml"));
-//        primaryStage.setTitle("Hello World");
-//        primaryStage.setScene(new Scene(root, 600, 400));
-//        primaryStage.show();
-//    }
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("/sample/View/RegisterView/Register.fxml"));
-//        primaryStage.setTitle("Registration");
-//        primaryStage.setScene(new Scene(root, 600, 400));
-//        primaryStage.show();
-//    }
-
-
     public static void main(String[] args) {
+//        final String SELECT_QUERY = "SELECT * FROM AUTHORS";
+//        try {
+//            Connection conn;
+//            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+//            String dbURL = "jdbc:derby:books;create=true;";
+//            String user = "deitel";
+//            String password = "deitel";
+//            conn = DriverManager.getConnection(dbURL, user, password);
+//            System.out.println("Connected");
+//        }catch (ClassNotFoundException | SQLException e){
+//            e.printStackTrace();
+//        }
+
         launch(args);
-//book edit and book delete
     }
 }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AdminControl">
+   <children>
+      <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
+         <image>
+            <Image url="@/sample/View/theme/images/main_menu.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="librarian" alignment="BOTTOM_LEFT" layoutX="83.0" layoutY="263.0" mnemonicParsing="false" onAction="#librarianHandler" opacity="0.11" prefHeight="134.0" prefWidth="186.0" text="Librarian" textFill="#0a004d" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="studentButton" alignment="BOTTOM_LEFT" layoutX="333.0" layoutY="260.0" mnemonicParsing="false" onAction="#studentButtonHandler" opacity="0.11" prefHeight="140.0" prefWidth="186.0" text="Student">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="bookButton" alignment="BOTTOM_LEFT" layoutX="581.0" layoutY="260.0" mnemonicParsing="false" onAction="#bookButtonHandler" opacity="0.11" prefHeight="134.0" prefWidth="179.0" text="Book">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <Button fx:id="logout" alignment="CENTER" contentDisplay="CENTER" layoutX="681.0" layoutY="99.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="47.0" prefWidth="79.0" style="-fx-border-radius: 50; -fx-background-color: #9d6bff;" text="Logout">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
