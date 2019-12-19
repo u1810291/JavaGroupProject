@@ -11,8 +11,8 @@
             <Image url="@../images/student_change.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="logout" layoutX="557.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="81.0" prefWidth="99.0" text="logout" />
-      <Button fx:id="back" layoutX="170.0" layoutY="72.0" mnemonicParsing="false" onAction="#backHandler" prefHeight="87.0" prefWidth="108.0" text="back" />
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout" />
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back" />
       <TableView fx:id="TableView" layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
         <columns>
           <TableColumn fx:id="fullName" prefWidth="93.0" text="Full name" />

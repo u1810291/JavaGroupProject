@@ -12,8 +12,8 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="557.0" layoutY="75.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="99.0" text="logout" visible="false" />
-      <Button layoutX="170.0" layoutY="72.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="108.0" text="back" visible="false" />
+      <Button alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout" />
+      <Button alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back" />
       <TableView fx:id="tableView" layoutX="17.0" layoutY="255.0" prefHeight="306.0" prefWidth="819.0">
         <columns>
           <TableColumn prefWidth="347.0" text="all books" />
