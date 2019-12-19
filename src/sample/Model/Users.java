@@ -1,57 +1,88 @@
 package sample.Model;
 
 
+import javafx.scene.control.Button;
+
 public class Users {
-    private int user_id;
-    private long phone;
-    private String name, surname, email, address, login, password;
+
+    private String id, status, fullName, dateOfBirth, password;
+    private Button add, edit, delete;
+
+    public Users(String id, String fullName, String dateOfBirth, String password, Button add, Button edit, Button delete) {
+        this.id = id;
+        this.fullName = fullName;
+        this.dateOfBirth = dateOfBirth;
+        this.password = password;
+        this.add = add;
+        this.edit = edit;
+        this.delete = delete;
+    }
+
+    public Users(String valueOf, String s, String s1, String s2, String s3, String s4, Button add, Button edit, Button delete) {
+
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
-    public String getLogin() {
-        return login;
-    }
-    public void setLogin(String login) {
-        this.login = login;
-    }
-    public String getAddress() {
-        return address;
-    }
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    public long getPhone() {
-        return phone;
-    }
-    public void setPhone(long phone) {
-        this.phone = phone;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getSurname() {
-        return surname;
-    }
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getUser_id() {
-        return user_id;
-    }
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+
+    public String getId() {
+        return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Button getAdd() {
+        return add;
+    }
+
+    public void setAdd(Button add) {
+        this.add = add;
+    }
+
+    public Button getEdit() {
+        return edit;
+    }
+
+    public void setEdit(Button edit) {
+        this.edit = edit;
+    }
+
+    public Button getDelete() {
+        return delete;
+    }
+
+    public void setDelete(Button delete) {
+        this.delete = delete;
+    }
 }

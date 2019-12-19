@@ -13,11 +13,14 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="logout" layoutX="557.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="81.0" prefWidth="99.0" text="logout">
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="557.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.26" prefHeight="81.0" prefWidth="99.0" text="logout">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Button fx:id="blockBack" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="70.0" mnemonicParsing="false" onAction="#backButton" opacity="0.26" prefHeight="88.0" prefWidth="99.0" style="-fx-background-radius: 100;" text="back">
+         </cursor>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="70.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.26" prefHeight="88.0" prefWidth="99.0" style="-fx-background-radius: 100;" text="back">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

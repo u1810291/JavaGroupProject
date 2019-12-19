@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -30,7 +31,19 @@ public class LibrarianControl {
   public TextField idOfStudent;
   public DatePicker blockStudent;
   public Button issueBlock;
-  public Button blockBack;
+  public TextField searchTextField;
+  public CheckBox borrowedBooks;
+  public CheckBox overdue;
+  public CheckBox title;
+  public CheckBox subject;
+  public CheckBox authors;
+  public CheckBox ISBN;
+  public CheckBox publishDate;
+  public Button applySearch;
+  public TextField bookISBN;
+  public TextField ID;
+  public DatePicker dateIssue;
+  public Button issue;
 
   public void monthlyReportHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/report.fxml"));
@@ -87,11 +100,13 @@ public class LibrarianControl {
     stage.setScene(new Scene(root, 850 ,600));
     stage.show();
   }
-
-  public void boockBackHandler(ActionEvent event) {
-  }
-
-  public void backHandler(ActionEvent event) {
+  public void backHandler(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/librarian_management_menu.fxml"));
+    Stage stage = (Stage) back.getScene().getWindow();
+    stage.close();
+    stage.setTitle("Menu");
+    stage.setScene(new Scene(root, 850 ,600));
+    stage.show();
   }
 
   public void issueFineHandler(ActionEvent event) {
@@ -101,5 +116,8 @@ public class LibrarianControl {
   }
 
   public void backButton(ActionEvent event) {
+  }
+
+  public void bookViewApply(ActionEvent event) {
   }
 }

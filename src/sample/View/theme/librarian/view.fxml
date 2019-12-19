@@ -12,8 +12,8 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="557.0" layoutY="75.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="99.0" text="logout" visible="false" />
-      <Button layoutX="170.0" layoutY="72.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="108.0" text="back" visible="false" />
+      <Button fx:id="logout" layoutX="557.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="81.0" prefWidth="99.0" text="logout" />
+      <Button fx:id="back" layoutX="170.0" layoutY="72.0" mnemonicParsing="false" onAction="#backHandler" prefHeight="87.0" prefWidth="108.0" text="back" />
       <TableView layoutX="17.0" layoutY="255.0" prefHeight="306.0" prefWidth="819.0">
         <columns>
           <TableColumn prefWidth="347.0" text="all books" />
@@ -32,7 +32,7 @@
             <CheckBox fx:id="publishDate" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="91.0" text="publish date" />
          </children>
       </HBox>
-      <Button fx:id="applySearch" layoutX="575.0" layoutY="167.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="232.0" style="-fx-background-color: #339933;" text="apply" textFill="WHITE">
+      <Button fx:id="applySearch" layoutX="575.0" layoutY="167.0" mnemonicParsing="false" onAction="#bookViewApply" prefHeight="39.0" prefWidth="232.0" style="-fx-background-color: #339933;" text="apply" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

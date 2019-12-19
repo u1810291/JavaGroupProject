@@ -12,7 +12,7 @@
          </image>
       </ImageView>
       <Button fx:id="logout" layoutX="557.0" layoutY="75.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="81.0" prefWidth="99.0" text="logout" />
-      <Button fx:id="bookBack" layoutX="170.0" layoutY="72.0" mnemonicParsing="false" onAction="#boockBackHandler" prefHeight="87.0" prefWidth="108.0" text="back" />
+      <Button fx:id="back" layoutX="170.0" layoutY="72.0" mnemonicParsing="false" onAction="#backHandler" prefHeight="87.0" prefWidth="108.0" text="back" />
       <TableView layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
         <columns>
           <TableColumn prefWidth="93.0" text="title" />

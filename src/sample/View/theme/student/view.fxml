@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.StudentControl">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.StudentControl">
    <children>
       <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
          <image>
@@ -20,7 +14,7 @@
       </ImageView>
       <Button layoutX="557.0" layoutY="75.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="99.0" text="logout" visible="false" />
       <Button layoutX="170.0" layoutY="72.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="108.0" text="back" visible="false" />
-      <TableView layoutX="17.0" layoutY="255.0" prefHeight="306.0" prefWidth="819.0">
+      <TableView fx:id="tableView" layoutX="17.0" layoutY="255.0" prefHeight="306.0" prefWidth="819.0">
         <columns>
           <TableColumn prefWidth="347.0" text="all books" />
             <TableColumn prefWidth="373.0" text="student id" />
