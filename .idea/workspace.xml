@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Almost last changes">
-      <change afterPath="$PROJECT_DIR$/src/sample/View/theme/student/current_fine.fxml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="my changes">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_swt1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/Accounts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/AdminControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/AdminControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/LibrarianControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/LibrarianControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller/StudentControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller/StudentControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Model/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Model/Permissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/admin/librarian_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/admin/librarian_management.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/admin/student_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/admin/student_management.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/librarian/block_issue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/librarian/block_issue.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/librarian/book_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/librarian/book_management.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/librarian/report.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/librarian/report.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/librarian/return_issue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/librarian/return_issue.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/librarian/student_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/librarian/student_management.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/librarian/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/librarian/view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/student/student_menu.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/student/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/student/view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaFXHelloWorld.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFXHelloWorld.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/admin/book_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/admin/book_management.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/admin/main_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/admin/main_menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/View/theme/librarian/librarian_management_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/View/theme/librarian/librarian_management_menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,10 +356,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1576756711318" />
-    <state x="96" y="0" key="CommitChangelistDialog2" timestamp="1576764372512">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="101" y="0" key="CommitChangelistDialog2" timestamp="1576764451251">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="96" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1576764372512" />
+    <state x="101" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576764451251" />
     <state x="0" y="54" key="DiffContextDialog" timestamp="1576753375498">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -419,10 +409,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1576748514628" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1576753405658">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="290" y="119" key="Vcs.Push.Dialog.v2" timestamp="1576764905579">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1576753405658" />
+    <state x="290" y="119" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576764905579" />
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1576759522393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

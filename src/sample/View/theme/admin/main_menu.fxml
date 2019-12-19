@@ -13,22 +13,22 @@
             <Image url="@/sample/View/theme/images/main_menu.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="librarian" alignment="BOTTOM_LEFT" layoutX="83.0" layoutY="263.0" mnemonicParsing="false" onAction="#librarianHandler" opacity="0.11" prefHeight="134.0" prefWidth="186.0" text="Librarian" textFill="#0a004d" underline="true">
+      <Button fx:id="librarian" alignment="BOTTOM_LEFT" layoutX="84.0" layoutY="260.0" mnemonicParsing="false" onAction="#librarianHandler" opacity="0.15" prefHeight="140.0" prefWidth="186.0" text="         Librarian">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="studentButton" alignment="BOTTOM_LEFT" layoutX="333.0" layoutY="260.0" mnemonicParsing="false" onAction="#studentButtonHandler" opacity="0.11" prefHeight="140.0" prefWidth="186.0" text="         Student">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>
-      <Button fx:id="studentButton" alignment="BOTTOM_LEFT" layoutX="333.0" layoutY="260.0" mnemonicParsing="false" onAction="#studentButtonHandler" opacity="0.11" prefHeight="140.0" prefWidth="186.0" text="Student">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Button>
-      <Button fx:id="bookButton" alignment="BOTTOM_LEFT" layoutX="581.0" layoutY="260.0" mnemonicParsing="false" onAction="#bookButtonHandler" opacity="0.11" prefHeight="134.0" prefWidth="179.0" text="Book">
+      <Button fx:id="bookButton" alignment="BOTTOM_LEFT" layoutX="577.0" layoutY="260.0" mnemonicParsing="false" onAction="#bookButtonHandler" opacity="0.11" prefHeight="140.0" prefWidth="186.0" text="             Book">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
          <opaqueInsets>
             <Insets />
          </opaqueInsets></Button>
-      <Button fx:id="logout" alignment="CENTER" contentDisplay="CENTER" layoutX="681.0" layoutY="99.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="47.0" prefWidth="79.0" style="-fx-border-radius: 50; -fx-background-color: #9d6bff;" text="Logout">
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="555.0" layoutY="66.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.1" prefHeight="95.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Logout">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>

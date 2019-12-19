@@ -11,12 +11,12 @@
             <Image url="@../images/librarian_management_menu.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="students" layoutX="78.0" layoutY="184.0" mnemonicParsing="false" onAction="#studentsHandler" prefHeight="140.0" prefWidth="186.0" text="student" />
-      <Button fx:id="book" layoutX="331.0" layoutY="186.0" mnemonicParsing="false" onAction="#bookHandler" prefHeight="140.0" prefWidth="186.0" text="book" />
-      <Button fx:id="logout" layoutX="560.0" layoutY="77.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="81.0" prefWidth="99.0" text="logout" />
-      <Button fx:id="view" layoutX="596.0" layoutY="190.0" mnemonicParsing="false" onAction="#viewHandler" prefHeight="130.0" prefWidth="175.0" text="view" />
-      <Button fx:id="borrowReturn" layoutX="85.0" layoutY="372.0" mnemonicParsing="false" onAction="#borrowReturnHandler" prefHeight="128.0" prefWidth="173.0" text="borrow and return" />
-      <Button fx:id="issueBook" layoutX="340.0" layoutY="373.0" mnemonicParsing="false" onAction="#issueBookHandler" prefHeight="125.0" prefWidth="175.0" text="issue and block" />
-      <Button fx:id="monthlyReport" layoutX="590.0" layoutY="370.0" mnemonicParsing="false" onAction="#monthlyReportHandler" prefHeight="137.0" prefWidth="188.0" text="monthly report" />
+      <Button fx:id="students" layoutX="78.0" layoutY="184.0" mnemonicParsing="false" onAction="#studentsHandler" opacity="0.15" prefHeight="140.0" prefWidth="186.0" />
+      <Button fx:id="book" layoutX="331.0" layoutY="186.0" mnemonicParsing="false" onAction="#bookHandler" opacity="0.15" prefHeight="140.0" prefWidth="188.0" />
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="62.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout" />
+      <Button fx:id="view" layoutX="590.0" layoutY="186.0" mnemonicParsing="false" onAction="#viewHandler" opacity="0.15" prefHeight="137.0" prefWidth="186.0" />
+      <Button fx:id="borrowReturn" layoutX="78.0" layoutY="370.0" mnemonicParsing="false" onAction="#borrowReturnHandler" opacity="0.15" prefHeight="137.0" prefWidth="186.0" />
+      <Button fx:id="issueBook" layoutX="333.0" layoutY="370.0" mnemonicParsing="false" onAction="#issueBookHandler" opacity="0.15" prefHeight="137.0" prefWidth="188.0" />
+      <Button fx:id="monthlyReport" layoutX="588.0" layoutY="370.0" mnemonicParsing="false" onAction="#monthlyReportHandler" opacity="0.15" prefHeight="137.0" prefWidth="188.0" />
    </children>
 </AnchorPane>
