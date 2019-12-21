@@ -15,14 +15,14 @@
       <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back" />
       <TableView fx:id="TableView" layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
         <columns>
-          <TableColumn fx:id="fullName" prefWidth="93.0" text="Full name" />
-          <TableColumn fx:id="id" prefWidth="104.99998474121094" text="id" />
-            <TableColumn fx:id="status" prefWidth="115.0" text="Status " />
-            <TableColumn fx:id="dateOfBirth" prefWidth="121.0" text="data of birdth" />
-            <TableColumn fx:id="password" prefWidth="141.0" text="password" />
-            <TableColumn fx:id="addButton" prefWidth="85.0" text="add" />
-            <TableColumn fx:id="editButton" prefWidth="77.0" text="edit" />
-            <TableColumn fx:id="deleteButton" prefWidth="76.0" text="delete" />
+            <TableColumn fx:id="fullName" prefWidth="145.00001525878906" text="Full name" />
+            <TableColumn fx:id="id" prefWidth="109.99999237060547" text="id" />
+            <TableColumn fx:id="status" prefWidth="108.0" text="Status " />
+            <TableColumn fx:id="dateOfBirth" prefWidth="135.0" text="data of birdth" />
+            <TableColumn fx:id="password" prefWidth="162.0" text="password" />
+            <TableColumn fx:id="addButton" prefWidth="47.0" text="add" />
+            <TableColumn fx:id="editButton" prefWidth="47.0" text="edit" />
+            <TableColumn fx:id="deleteButton" prefWidth="56.0" text="delete" />
         </columns>
       </TableView>
    </children>

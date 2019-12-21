@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LibrarianControl">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LibrarianControl">
    <children>
       <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
          <image>
@@ -20,11 +23,14 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <TableView layoutX="39.0" layoutY="188.0" prefHeight="384.0" prefWidth="769.0">
+      <TableView fx:id="reportView" layoutX="21.0" layoutY="188.0" prefHeight="395.0" prefWidth="810.0">
         <columns>
-          <TableColumn prefWidth="215.0" text="months" />
-          <TableColumn prefWidth="225.0" text="issued books" />
-            <TableColumn prefWidth="261.0" text="returned books" />
+          <TableColumn fx:id="datesIssue" prefWidth="116.0" text="Dates of issue" />
+            <TableColumn fx:id="datesReturn" prefWidth="125.0" text="Dates of return" />
+          <TableColumn fx:id="booksTitle" prefWidth="177.0" text="Books title" />
+            <TableColumn fx:id="booksStatus" prefWidth="96.0" text="Books status" />
+            <TableColumn fx:id="studentId" prefWidth="139.0" text="Student id" />
+            <TableColumn fx:id="studentName" prefWidth="156.0" text="Student name" />
         </columns>
       </TableView>
    </children>

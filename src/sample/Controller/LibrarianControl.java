@@ -1,19 +1,24 @@
 package sample.Controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.Model.Books;
+import sample.Model.Users;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LibrarianControl {
+public class LibrarianControl implements Initializable {
   public Button students;
   public Button book;
   public Button logout;
@@ -21,7 +26,7 @@ public class LibrarianControl {
   public Button borrowReturn;
   public Button issueBook;
   public Button monthlyReport;
-  public Button bookBack;
+  public Button blockBack;
   public Button back;
   public Button issueFine;
   public TextField issueIdOfStudent;
@@ -45,6 +50,28 @@ public class LibrarianControl {
   public DatePicker dateIssue;
   public Button issue;
 
+  @FXML private TableView<Books> reportView;
+  @FXML private TableColumn<Books, String> datesIssue;
+  @FXML private TableColumn<Books, String> datesReturn;
+  @FXML private TableColumn<Books, String> booksTitle;
+  @FXML private TableColumn<Books, String> booksStatus;
+  @FXML private TableColumn<Users, String> studentId;
+  @FXML private TableColumn<Users, String> studentName;
+  @Override
+  public void initialize(URL url, ResourceBundle resourceBundle) {
+    initCols();
+  }
+  public void initCols(){
+    datesIssue.setCellValueFactory(new PropertyValueFactory<>("datesIssue"));
+    datesReturn.setCellValueFactory(new PropertyValueFactory<>("datesReturn"));
+    booksTitle.setCellValueFactory(new PropertyValueFactory<>("booksTitle"));
+    booksStatus.setCellValueFactory(new PropertyValueFactory<>("booksStatus"));
+    studentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
+    studentName.setCellValueFactory(new PropertyValueFactory<>("studentName"));
+
+  }
+
+
   public void monthlyReportHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/report.fxml"));
     Stage stage = (Stage) monthlyReport.getScene().getWindow();
@@ -52,8 +79,8 @@ public class LibrarianControl {
     stage.setScene(new Scene(root, 850 ,600));
     stage.show();
   }
-  public void issueBookHandler(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/return_issue.fxml"));
+  public void issueBlockHandler(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/block_issue.fxml"));
     Stage stage = (Stage) issueBook.getScene().getWindow();
     stage.close();
     stage.setTitle("Issue Book");
@@ -61,12 +88,12 @@ public class LibrarianControl {
     stage.show();
   }
   public void borrowReturnHandler(ActionEvent event) throws IOException {
-//    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/view.fxml"));
-//    Stage stage = (Stage) borrowReturn.getScene().getWindow();
-//    stage.close();
-//    stage.setTitle("Issue Book");
-//    stage.setScene(new Scene(root, 850 ,600));
-//    stage.show();
+    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/return_issue.fxml"));
+    Stage stage = (Stage) borrowReturn.getScene().getWindow();
+    stage.close();
+    stage.setTitle("Issue Book");
+    stage.setScene(new Scene(root, 850 ,600));
+    stage.show();
   }
   public void viewHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/view.fxml"));
@@ -85,7 +112,7 @@ public class LibrarianControl {
     stage.show();
   }
   public void bookHandler(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/book_management.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/admin/book_management.fxml"));
     Stage stage = (Stage) book.getScene().getWindow();
     stage.close();
     stage.setTitle("Book");
@@ -93,7 +120,7 @@ public class LibrarianControl {
     stage.show();
   }
   public void studentsHandler(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/student_management.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/admin/student_management.fxml"));
     Stage stage = (Stage) students.getScene().getWindow();
     stage.close();
     stage.setTitle("Students");
@@ -108,16 +135,11 @@ public class LibrarianControl {
     stage.setScene(new Scene(root, 850 ,600));
     stage.show();
   }
-
   public void issueFineHandler(ActionEvent event) {
-  }
 
-  public void issueBlockHandler(ActionEvent event) {
-  }
-
-  public void backButton(ActionEvent event) {
   }
 
   public void bookViewApply(ActionEvent event) {
+
   }
 }

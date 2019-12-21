@@ -13,12 +13,12 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Text layoutX="27.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="current status" wrappingWidth="236.13671875">
+      <Text layoutX="33.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="current status" wrappingWidth="236.13671875">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <VBox layoutX="42.0" layoutY="226.0" prefHeight="117.0" prefWidth="159.0" spacing="10.0">
+      <VBox layoutX="44.0" layoutY="275.0" prefHeight="117.0" prefWidth="159.0" spacing="10.0">
          <children>
             <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="active" textFill="#0a9e3e">
                <font>

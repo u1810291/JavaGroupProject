@@ -17,16 +17,16 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <TableView layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
+      <TableView fx:id="TableBookView" layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
         <columns>
-          <TableColumn prefWidth="93.0" text="title" />
-          <TableColumn prefWidth="91.0" text="subject" />
-            <TableColumn prefWidth="81.0" text="author" />
-            <TableColumn prefWidth="89.0" text="ISBN" />
-            <TableColumn prefWidth="109.0" text="publish date" />
-            <TableColumn prefWidth="71.0" text="add" />
-            <TableColumn prefWidth="68.0" text="edit" />
-            <TableColumn prefWidth="78.0" text="delete" />
+          <TableColumn fx:id="title" prefWidth="163.0" text="title" />
+          <TableColumn fx:id="subject" prefWidth="105.0" text="subject" />
+            <TableColumn fx:id="author" prefWidth="125.0" text="author" />
+            <TableColumn fx:id="ISBN" prefWidth="130.0" text="ISBN" />
+            <TableColumn fx:id="publishDate" prefWidth="144.0" text="publish date" />
+            <TableColumn fx:id="add" prefWidth="47.0" text="add" />
+            <TableColumn fx:id="edit" prefWidth="43.0" text="edit" />
+            <TableColumn fx:id="delete" prefWidth="56.0" text="delete" />
         </columns>
       </TableView>
    </children>
