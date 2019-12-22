@@ -37,13 +37,14 @@ public class DatabaseHandler {
           "     isbn varchar(200) primary key,\n"+
           "     title varchar(200),\n" +
           "     subject varchar(200),\n" +
+          "     status varchar(200),\n" +
           "     author varchar(200),\n" +
           "     publishDate varchar(200) " +
           ")";
       if (tables.next()){
         System.out.println("Table " + TABLE_NAME + " already exist. Ready to go!");
-      //  statement.execute(DROP_TABLE);
-     //   System.out.println("Table dropped!");
+//        statement.execute(DROP_TABLE);
+//        System.out.println("Table dropped!");
       }
       else {
         statement.execute(CREATE_TABLE);

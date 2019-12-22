@@ -4,11 +4,7 @@ package sample.Model;
 import javafx.scene.control.Button;
 
 public class Users {
-    public Users(){
-        
-    }
-
-    private String s, fullName, id, status , dateOfBirth, password;
+    private String fullName, id, status , dateOfBirth, password;
 
     public Users(String f, String i, String s, String d, String p) {
         this.fullName = f;

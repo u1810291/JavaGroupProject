@@ -2,11 +2,12 @@ package sample.Model;
 
 
 public class Books { //title, subject, author, ISBN, publishDate, addBook, editBook, deleteBook
-    private String title, subject, author, ISBN, publishDate;
-    public Books(String t, String s, String a, String i, String p) {
+    private String title, subject, author,status, ISBN, publishDate;
+    public Books(String t, String s, String a, String st,String i, String p) {
         this.title = t;
         this.subject = s;
         this.author = a;
+        this.status = st;
         this.ISBN = i;
         this.publishDate = p;
     }
@@ -48,5 +49,13 @@ public class Books { //title, subject, author, ISBN, publishDate, addBook, editB
 
     public String getTitle() {
         return title;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
