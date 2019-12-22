@@ -17,16 +17,13 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <TableView fx:id="TableBookView" layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
+      <TableView fx:id="TableBookView" layoutX="20.0" layoutY="167.0" prefHeight="372.0" prefWidth="814.0">
         <columns>
-          <TableColumn fx:id="title" prefWidth="163.0" text="Title" />
-          <TableColumn fx:id="subject" prefWidth="105.0" text="Subject" />
-            <TableColumn fx:id="author" prefWidth="125.0" text="Author" />
-            <TableColumn fx:id="ISBN" prefWidth="130.0" text="ISBN" />
-            <TableColumn fx:id="publishDate" prefWidth="144.0" text="Publish date" />
-            <TableColumn fx:id="add" prefWidth="47.0" text="Add" />
-            <TableColumn fx:id="edit" prefWidth="43.0" text="Edit" />
-            <TableColumn fx:id="delete" prefWidth="56.0" text="Delete" />
+          <TableColumn fx:id="title" maxWidth="190.0" minWidth="190.0" prefWidth="190.0" text="Title" />
+          <TableColumn fx:id="subject" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Subject" />
+            <TableColumn fx:id="author" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Author" />
+            <TableColumn fx:id="ISBN" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="ISBN" />
+            <TableColumn fx:id="publishDate" maxWidth="135.0" minWidth="135.0" prefWidth="135.0" text="Publish date" />
         </columns>
       </TableView>
       <Label layoutX="210.0" layoutY="137.0" text="Back" textFill="WHITE">
@@ -39,5 +36,13 @@
             <Font size="16.0" />
          </font>
       </Label>
+      <Button fx:id="deleteBook" layoutX="763.0" layoutY="565.0" mnemonicParsing="false" onAction="#deleteBookHandler" prefHeight="25.0" prefWidth="70.0" text="delete" />
+      <TextField fx:id="titleBook" layoutX="20.0" layoutY="540.0" prefHeight="25.0" prefWidth="190.0" promptText="title" />
+      <TextField fx:id="subjectBook" layoutX="210.0" layoutY="540.0" prefHeight="25.0" prefWidth="180.0" promptText="subject" />
+      <TextField fx:id="authorBook" layoutX="390.0" layoutY="540.0" prefHeight="25.0" prefWidth="180.0" promptText="author" />
+      <TextField fx:id="isbnBookText" layoutX="570.0" layoutY="540.0" prefHeight="25.0" prefWidth="125.0" promptText="ISBN" />
+      <Button fx:id="addBook" layoutX="595.0" layoutY="565.0" mnemonicParsing="false" onAction="#addBookHandler" prefHeight="25.0" prefWidth="70.0" text="add" />
+      <Button fx:id="editBook" layoutX="680.0" layoutY="565.0" mnemonicParsing="false" onAction="#editBookHandler" prefHeight="25.0" prefWidth="70.0" text="edit" />
+      <TextField fx:id="publishBookText1" layoutX="695.0" layoutY="540.0" prefHeight="25.0" prefWidth="137.0" promptText="publish date" />
    </children>
 </AnchorPane>

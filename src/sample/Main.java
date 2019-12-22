@@ -24,19 +24,7 @@ public class Main extends Application
         primaryStage.show();
     }
     public static void main(String[] args) {
-        final String SELECT_QUERY = "SELECT * FROM AUTHORS";
-        try {
-            Connection conn;
-            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-            String dbURL = "jdbc:derby:books;";
-            String user = "deitel";
-            String password = "deitel";
-            conn = DriverManager.getConnection(dbURL, user, password);
-            System.out.println("Connected");
-        }catch (ClassNotFoundException | SQLException e){
-            e.printStackTrace();
-        }
-//        launch(args);
+        launch(args);
     }
 }
 

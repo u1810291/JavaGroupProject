@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AdminControl">
    <children>
@@ -11,19 +12,34 @@
             <Image url="@../images/student_change.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout" />
-      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back" />
-      <TableView fx:id="TableView" layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
+      <TableView fx:id="TableView" layoutX="20.0" layoutY="167.0" prefHeight="371.0" prefWidth="814.0">
         <columns>
-          <TableColumn fx:id="fullName" prefWidth="93.0" text="Full name" />
-          <TableColumn fx:id="id" prefWidth="104.99998474121094" text="id" />
-            <TableColumn fx:id="status" prefWidth="115.0" text="Status " />
-            <TableColumn fx:id="dateOfBirth" prefWidth="121.0" text="data of birdth" />
-            <TableColumn fx:id="password" prefWidth="141.0" text="password" />
-            <TableColumn fx:id="addButton" prefWidth="85.0" text="add" />
-            <TableColumn fx:id="editButton" prefWidth="77.0" text="edit" />
-            <TableColumn fx:id="deleteButton" prefWidth="76.0" text="delete" />
+            <TableColumn fx:id="fullName" maxWidth="247.0" prefWidth="247.0" text="Full name" />
+            <TableColumn fx:id="id" maxWidth="155.0" prefWidth="155.0" text="Id" />
+            <TableColumn fx:id="status" maxWidth="100.0" prefWidth="100.0" text="Status " />
+            <TableColumn fx:id="dateOfBirth" maxWidth="160.0" prefWidth="160.0" text="Data of birdth" />
+            <TableColumn fx:id="password" maxWidth="150.0" prefWidth="150.0" text="Password" />
         </columns>
       </TableView>
+      <Label layoutX="210.0" layoutY="137.0" text="Back" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="578.0" layoutY="137.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fullNameStudent" layoutX="22.0" layoutY="539.0" prefHeight="25.0" prefWidth="247.0" promptText="full name" />
+      <TextField fx:id="idStudent" layoutX="269.0" layoutY="539.0" prefHeight="25.0" prefWidth="155.0" promptText="id" />
+      <TextField fx:id="statusStudent" layoutX="424.0" layoutY="539.0" prefHeight="25.0" prefWidth="100.0" promptText="status" />
+      <TextField fx:id="dateOfBirthStudent" layoutX="524.0" layoutY="539.0" prefHeight="25.0" prefWidth="160.0" promptText="date of birth" />
+      <TextField fx:id="passwordStudent" layoutX="684.0" layoutY="539.0" prefHeight="25.0" prefWidth="150.0" promptText="password" />
+      <Button fx:id="addStudent" layoutX="606.0" layoutY="564.0" mnemonicParsing="false" onAction="#addStudentHandler" prefHeight="25.0" prefWidth="70.0" text="add" />
+      <Button fx:id="editStudent" layoutX="684.0" layoutY="564.0" mnemonicParsing="false" onAction="#editStudentHandler" prefHeight="25.0" prefWidth="70.0" text="edit" />
+      <Button fx:id="deleteStudent" layoutX="764.0" layoutY="564.0" mnemonicParsing="false" onAction="#deleteStudentHandler" prefHeight="25.0" prefWidth="70.0" text="delete" />
    </children>
 </AnchorPane>

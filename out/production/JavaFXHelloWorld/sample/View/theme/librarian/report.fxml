@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LibrarianControl">
    <children>
@@ -12,20 +13,33 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout">
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back">
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <TableView layoutX="39.0" layoutY="188.0" prefHeight="384.0" prefWidth="769.0">
+      <TableView fx:id="reportView" layoutX="21.0" layoutY="188.0" prefHeight="395.0" prefWidth="810.0">
         <columns>
-          <TableColumn prefWidth="215.0" text="months" />
-          <TableColumn prefWidth="225.0" text="issued books" />
-            <TableColumn prefWidth="261.0" text="returned books" />
+          <TableColumn fx:id="datesIssue" prefWidth="116.0" text="Dates of issue" />
+            <TableColumn fx:id="datesReturn" prefWidth="125.0" text="Dates of return" />
+          <TableColumn fx:id="booksTitle" prefWidth="177.0" text="Books title" />
+            <TableColumn fx:id="booksStatus" prefWidth="96.0" text="Books status" />
+            <TableColumn fx:id="studentId" prefWidth="139.0" text="Student id" />
+            <TableColumn fx:id="studentName" prefWidth="156.0" text="Student name" />
         </columns>
       </TableView>
+      <Label layoutX="212.0" layoutY="137.0" text="Back" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="579.0" layoutY="137.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

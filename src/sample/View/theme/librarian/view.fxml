@@ -16,15 +16,20 @@
       <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
       <TableView layoutX="17.0" layoutY="255.0" prefHeight="306.0" prefWidth="819.0">
         <columns>
-          <TableColumn prefWidth="347.0" text="All books" />
-            <TableColumn prefWidth="373.0" text="Student Id" />
+          <TableColumn prefWidth="118.99998474121094" text="Status" />
+            <TableColumn prefWidth="103.0" text="Overdue" />
+            <TableColumn prefWidth="103.0" text="Title" />
+            <TableColumn prefWidth="103.0" text="Subject" />
+            <TableColumn prefWidth="133.0" text="Author" />
+            <TableColumn prefWidth="125.0" text="ISBN" />
+            <TableColumn prefWidth="129.0" text="Published date" />
         </columns>
       </TableView>
       <TextField fx:id="searchTextField" layoutX="24.0" layoutY="167.0" prefHeight="39.0" prefWidth="243.0" promptText="search" />
       <HBox layoutX="17.0" layoutY="216.0" prefHeight="39.0" prefWidth="674.0" spacing="5.0">
          <children>
-            <CheckBox fx:id="borrowedBooks" mnemonicParsing="false" prefHeight="36.0" prefWidth="117.0" text="Borrowed books" />
-            <CheckBox fx:id="overdue" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="73.0" text="Overdue" />
+            <CheckBox fx:id="borrowedBooks" mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="Status" />
+            <CheckBox fx:id="overdue" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="74.0" text="Overdue" />
             <CheckBox fx:id="title" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="51.0" text="Title" />
             <CheckBox fx:id="subject" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="64.0" text="Subject" />
             <CheckBox fx:id="authors" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" text="Author" />

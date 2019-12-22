@@ -13,14 +13,14 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout">
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="556.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back">
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -30,13 +30,13 @@
       <VBox layoutX="110.0" layoutY="217.0" prefHeight="305.0" prefWidth="243.0" spacing="10.0">
          <children>
             <TextField fx:id="issueReason" prefHeight="39.0" prefWidth="243.0" promptText="Reason for issuing a fine" />
-            <TextField fx:id="issueIdOfStudent" prefHeight="37.0" prefWidth="243.0" promptText="id of student" />
-            <DatePicker fx:id="dateFine" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="select return date">
+            <TextField fx:id="issueIdOfStudent" prefHeight="37.0" prefWidth="243.0" promptText="Id of student" />
+            <DatePicker fx:id="dateFine" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="Select return date">
                <cursor>
                   <Cursor fx:constant="CLOSED_HAND" />
                </cursor>
             </DatePicker>
-            <Button fx:id="issueFine" mnemonicParsing="false" onAction="#issueFineHandler" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #cc3300;" text="issue" textFill="WHITE">
+            <Button fx:id="issueFine" mnemonicParsing="false" onAction="#issueFineHandler" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #cc3300;" text="Issue" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -54,13 +54,13 @@
       <VBox layoutX="497.0" layoutY="220.0" prefHeight="299.0" prefWidth="243.0" spacing="10.0">
          <children>
             <TextField fx:id="reasonOfBlocking" prefHeight="39.0" prefWidth="243.0" promptText="Reason for blocking a student" />
-            <TextField fx:id="idOfStudent" prefHeight="37.0" prefWidth="243.0" promptText="id of student" />
-            <DatePicker fx:id="blockStudent" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="select return date">
+            <TextField fx:id="idOfStudent" prefHeight="37.0" prefWidth="243.0" promptText="Id of student" />
+            <DatePicker fx:id="blockStudent" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="Select return date">
                <cursor>
                   <Cursor fx:constant="CLOSED_HAND" />
                </cursor>
             </DatePicker>
-            <Button fx:id="issueBlock" mnemonicParsing="false" onAction="#issueBlockHandler" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #cc3300;" text="block" textFill="WHITE">
+            <Button fx:id="issueBlock" mnemonicParsing="false" onAction="#issueBlockHandler" prefHeight="39.0" prefWidth="244.0" style="-fx-background-color: #cc3300;" text="Block" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -70,10 +70,20 @@
             </Button>
          </children>
       </VBox>
-      <Text layoutX="498.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="block a student" wrappingWidth="242.0">
+      <Text layoutX="498.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Block a student" wrappingWidth="242.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
+      <Label layoutX="210.0" layoutY="140.0" text="Back" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="579.0" layoutY="136.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

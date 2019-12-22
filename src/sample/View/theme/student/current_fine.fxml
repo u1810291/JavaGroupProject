@@ -60,7 +60,6 @@
       </VBox>
       <Button fx:id="profile" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="60.0" mnemonicParsing="false" onAction="#profileHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
       <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="60.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
-      <DatePicker />
       <Label layoutX="199.0" layoutY="137.0" text="Reserve" textFill="WHITE">
          <font>
             <Font size="16.0" />

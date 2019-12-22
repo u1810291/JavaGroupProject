@@ -9,16 +9,13 @@ public class Users {
     }
 
     private String s, fullName, id, status , dateOfBirth, password;
-    private Button add, edit, delete;
-    public Users(String f, String i, String s, String d, String p, Button a, Button e, Button de) {
+
+    public Users(String f, String i, String s, String d, String p) {
         this.fullName = f;
         this.id = i;
         this.status = s;
         this.dateOfBirth = d;
         this.password = p;
-        this.add = a;
-        this.edit = e;
-        this.delete = de;
 
     }
     public String getStatus() {
@@ -50,23 +47,5 @@ public class Users {
     }
     public void setId(String id) {
         this.id = id;
-    }
-    public Button getAdd() {
-        return add;
-    }
-    public void setAdd(Button add) {
-        this.add = add;
-    }
-    public Button getEdit() {
-        return edit;
-    }
-    public void setEdit(Button edit) {
-        this.edit = edit;
-    }
-    public Button getDelete() {
-        return delete;
-    }
-    public void setDelete(Button delete) {
-        this.delete = delete;
     }
 }

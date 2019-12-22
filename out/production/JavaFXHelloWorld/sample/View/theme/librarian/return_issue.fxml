@@ -13,19 +13,19 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout">
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back">
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
       <VBox layoutX="110.0" layoutY="217.0" prefHeight="305.0" prefWidth="243.0" spacing="10.0">
          <children>
             <TextField fx:id="bookISBN" prefHeight="39.0" prefWidth="243.0" promptText="ISBN of book" />
-            <TextField fx:id="ID" prefHeight="37.0" prefWidth="243.0" promptText="id of student" />
-            <DatePicker fx:id="dateIssue" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="select return date">
+            <TextField fx:id="ID" prefHeight="37.0" prefWidth="243.0" promptText="Id of student" />
+            <DatePicker fx:id="dateIssue" editable="false" prefHeight="40.0" prefWidth="242.0" promptText="Select return date">
                <cursor>
                   <Cursor fx:constant="CLOSED_HAND" />
                </cursor>
@@ -48,8 +48,8 @@
       <VBox layoutX="497.0" layoutY="220.0" prefHeight="299.0" prefWidth="243.0" spacing="10.0">
          <children>
             <TextField prefHeight="39.0" prefWidth="243.0" promptText="ISBN of book" />
-            <TextField prefHeight="37.0" prefWidth="243.0" promptText="id of student" />
-            <DatePicker editable="false" prefHeight="40.0" prefWidth="242.0" promptText="select return date">
+            <TextField prefHeight="37.0" prefWidth="243.0" promptText="Id of student" />
+            <DatePicker editable="false" prefHeight="40.0" prefWidth="242.0" promptText="Select return date">
                <cursor>
                   <Cursor fx:constant="CLOSED_HAND" />
                </cursor>
@@ -64,10 +64,20 @@
             </Button>
          </children>
       </VBox>
-      <Text layoutX="498.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="return a book" wrappingWidth="242.0">
+      <Text layoutX="498.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return a book" wrappingWidth="242.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
+      <Label layoutX="210.0" layoutY="138.0" text="Back" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="579.0" layoutY="137.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

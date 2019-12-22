@@ -12,22 +12,37 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" styleClass="ra" text="logout" />
-      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="65.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back">
+      <Button alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" styleClass="ra" />
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="65.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <TableView layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
+      <TableView fx:id="TableBookView" layoutX="20.0" layoutY="167.0" prefHeight="372.0" prefWidth="814.0">
         <columns>
-          <TableColumn prefWidth="93.0" text="title" />
-          <TableColumn prefWidth="91.0" text="subject" />
-            <TableColumn prefWidth="81.0" text="author" />
-            <TableColumn prefWidth="89.0" text="ISBN" />
-            <TableColumn prefWidth="109.0" text="publish date" />
-            <TableColumn prefWidth="71.0" text="add" />
-            <TableColumn prefWidth="68.0" text="edit" />
-            <TableColumn prefWidth="78.0" text="delete" />
+          <TableColumn fx:id="title" maxWidth="190.0" minWidth="190.0" prefWidth="190.0" text="Title" />
+          <TableColumn fx:id="subject" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Subject" />
+            <TableColumn fx:id="author" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Author" />
+            <TableColumn fx:id="ISBN" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="ISBN" />
+            <TableColumn fx:id="publishDate" maxWidth="135.0" minWidth="135.0" prefWidth="135.0" text="Publish date" />
         </columns>
       </TableView>
+      <Label layoutX="210.0" layoutY="137.0" text="Back" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="579.0" layoutY="136.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteBook" layoutX="763.0" layoutY="565.0" mnemonicParsing="false" onAction="#deleteBookHandler" prefHeight="25.0" prefWidth="70.0" text="delete" />
+      <TextField fx:id="titleBook" layoutX="20.0" layoutY="540.0" prefHeight="25.0" prefWidth="190.0" promptText="title" />
+      <TextField fx:id="subjectBook" layoutX="210.0" layoutY="540.0" prefHeight="25.0" prefWidth="180.0" promptText="subject" />
+      <TextField fx:id="authorBook" layoutX="390.0" layoutY="540.0" prefHeight="25.0" prefWidth="180.0" promptText="author" />
+      <TextField fx:id="isbnBookText" layoutX="570.0" layoutY="540.0" prefHeight="25.0" prefWidth="125.0" promptText="ISBN" />
+      <Button fx:id="addBook" layoutX="595.0" layoutY="565.0" mnemonicParsing="false" onAction="#addBookHandler" prefHeight="25.0" prefWidth="70.0" text="add" />
+      <Button fx:id="editBook" layoutX="680.0" layoutY="565.0" mnemonicParsing="false" onAction="#editBookHandler" prefHeight="25.0" prefWidth="70.0" text="edit" />
+      <TextField fx:id="publishBookText1" layoutX="695.0" layoutY="540.0" prefHeight="25.0" prefWidth="137.0" promptText="publish date" />
    </children>
 </AnchorPane>

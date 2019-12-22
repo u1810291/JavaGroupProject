@@ -1,42 +1,78 @@
 package sample.Controller;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
+import sample.Database.DatabaseHandler;
+import sample.Model.Users;
+import javafx.scene.Scene;
+import sample.Model.Books;
+import javafx.scene.Parent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.stage.Stage;
-import sample.Model.Books;
-import sample.Model.Users;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
+import java.io.IOException;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class AdminControl implements Initializable
 {
-  @FXML private Button librarian;
-  @FXML private Button studentButton;
-  @FXML private Button bookButton;
-  @FXML private Button logout;
+  /*
+  * Librarian buttons and text fields
+  * */
+  public Button addLibrary;
+  public Button editLibrary;
+  public Button deleteLibrary;
+  public TextField idLibraryText;
+  public TextField statusLibraryText;
+  public TextField passwordLibraryText;
+  public TextField dateOfBirthLibraryText;
+  public TextField fullNameLibraryText;
+  /*
+  * Books buttons and text fields
+  * */
+  public Button addBook;
+  public Button editBook;
+  public Button deleteBook;
+  public TextField titleBook;
+  public TextField subjectBook;
+  public TextField authorBook;
+  public TextField isbnBookText;
+  /*
+  * Student buttons and text fields
+  * */
+  public Button addStudent;
+  public Button editStudent;
+  public Button deleteStudent;
+  public TextField passwordStudent;
+  public TextField dateOfBirthStudent;
+  public TextField statusStudent;
+  public TextField idStudent;
+  public TextField fullNameStudent;
+  public TextField publishBookText1;
+  /*
+  * Pages buttons
+  * */
   @FXML private Button back;
-
+  @FXML private Button logout;
+  @FXML private Button librarian;
+  @FXML private Button bookButton;
+  @FXML private Button studentButton;
+  /*
+  * Users table (librarians and students)
+  * */
   @FXML private TableView<Users> TableView;
   @FXML private TableColumn<Users, String> fullName;
   @FXML private TableColumn<Users, String> id;
   @FXML private TableColumn<Users, String> status;
   @FXML private TableColumn<Users, String> dateOfBirth;
   @FXML private TableColumn<Users, String> password;
-  @FXML private TableColumn<Users, Button> addButton;
-  @FXML private TableColumn<Users, Button> editButton;
-  @FXML private TableColumn<Users, Button> deleteButton;
   /*
   * Books table properties
   * */
@@ -46,15 +82,22 @@ public class AdminControl implements Initializable
   @FXML private TableColumn<Books, String> author;
   @FXML private TableColumn<Books, String> ISBN;
   @FXML private TableColumn<Books, String> publishDate;
-  @FXML private TableColumn<Books, Button> add;
-  @FXML private TableColumn<Books, Button> edit;
-  @FXML private TableColumn<Books, Button> delete;
+  DatabaseHandler handler;
+  /*
+  * Tables initializer
+  * */
   @Override
   public void initialize(URL url, ResourceBundle resourceBundle) {
     initTable();
-    initTable2();
+    handler = new DatabaseHandler();
+    checkData();
   }
-  public void initTable2(){
+  /*
+   * Columns and data initializers
+   * */
+  public void initTable(){
+    initCols();
+    loadData();
     initCols2();
     loadData2();
   }
@@ -68,107 +111,73 @@ public class AdminControl implements Initializable
       author.setCellValueFactory(new PropertyValueFactory<>("author"));
       ISBN.setCellValueFactory(new PropertyValueFactory<>("ISBN"));
       publishDate.setCellValueFactory(new PropertyValueFactory<>("publishDate"));
-      add.setCellValueFactory(new PropertyValueFactory<>("add"));
-      edit.setCellValueFactory(new PropertyValueFactory<>("edit"));
-      delete.setCellValueFactory(new PropertyValueFactory<>("delete"));
       TableBookView.setEditable(true);
-      addButton2();
-      editButton2();
-      deleteButton2();
     }
     catch (Exception e){
       System.out.println(e);
     }
   }
-  private void addButton2(){
-//    try
-//    {
-//
-//    }catch (Exception e){
-//      System.err.println(e);
-//    }
-  }
-  private void editButton2(){
-    try
-    {
 
-
-//    title, subject, author, ISBN, publishDate, addBook, editBook, deleteBook
-      title.setCellFactory(TextFieldTableCell.forTableColumn());
-      title.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setTitle(e.getNewValue());
-      });
-      subject.setCellFactory(TextFieldTableCell.forTableColumn());
-      subject.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setSubject(e.getNewValue());
-      });
-      ISBN.setCellFactory(TextFieldTableCell.forTableColumn());
-      ISBN.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setISBN(e.getNewValue());
-      });
-      dateOfBirth.setCellFactory(TextFieldTableCell.forTableColumn());
-      dateOfBirth.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setDateOfBirth(e.getNewValue());
-      });
-      password.setCellFactory(TextFieldTableCell.forTableColumn());
-      password.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setPassword(e.getNewValue());
-      });
-      TableBookView.setEditable(true);
-    }
-    catch (Exception e){
-      System.err.println(e);
-    }
+  public void editBookHandler(ActionEvent event) {
   }
-  private void deleteButton2(){
+  public void checkData(){
+    String qu = "SELECT title FROM BOOKS";
+    ResultSet rs = handler.execQuery(qu);
     try {
-//      deleteButton.setOnEditCommit(e -> {
-//        String fullName = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//        TableView.getItems().remove(fullName);
-//      });
-//      deleteButton.setOnEditCommit(e -> {
-//        String id = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//        TableView.getItems().remove(id);
-//      });
-//
-//      deleteButton.setOnEditCommit(e -> {
-//        String status = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//        TableView.getItems().remove(status);
-//      });
-//
-//      deleteButton.setOnEditCommit(e -> {
-//        String dateOfBirth = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//      });
-//        TableView.getItems().remove(dateOfBirth);
-//      TableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-//      ObservableList<Users> selectedRows = TableView.getSelectionModel().getSelectedItems();
-//// we don't want to iterate on same collection on with we remove items
-//      ArrayList<Users> rows = new ArrayList<>(selectedRows);
-//      rows.forEach(row -> TableView.getItems().remove(row));
+      while (rs.next()){
+        String tit = rs.getString("title");
+        System.out.println(tit);;
+      }
+    } catch (Exception e) {
+      System.out.println(e);
     }
-    catch (Exception e) {
-      System.err.println(e);
+  }
+  public void addBookHandler(ActionEvent event) {
+    String title = titleBook.getText();
+    String subject = subjectBook.getText();
+    String author = authorBook.getText();
+    String ISBN = isbnBookText.getText();
+    String publishDate = publishBookText1.getText();
+    if (title.isEmpty() || subject.isEmpty() ||  author.isEmpty() || ISBN.isEmpty() || publishDate.isEmpty()){
+      Alert alert = new Alert(AlertType.ERROR);
+      alert.setHeaderText(null);
+      alert.setContentText("Please fill all the empty places");
+      alert.showAndWait();
+      return;
     }
+
+    String qu = "INSERT INTO BOOKS VALUES ("+
+        "'" + ISBN + "', " +
+        "'" + title + "', " +
+        "'" + subject + "', " +
+        "'" + author + "', " +
+        "'" + publishDate + "'" +
+        ")";
+    System.out.println(qu);
+    if (handler.execAction(qu)){
+      Alert alert = new Alert(AlertType.INFORMATION);
+      alert.setHeaderText(null);
+      alert.setContentText("Successfully");
+      alert.showAndWait();
+    }
+    else {
+      Alert alert = new Alert(AlertType.ERROR);
+      alert.setHeaderText(null);
+      alert.setContentText("Failed");
+      alert.showAndWait();
+    }
+
+  }
+  public void deleteBookHandler(ActionEvent event) {
   }
   public void loadData2(){
     try{
       ObservableList<Books> table_dataa = FXCollections.observableArrayList();
       for (int i = 0; i < 20; i++){
-        table_dataa.add(new Books(
-            "Title " + i,
-            "Subject " + i,
-            "ISBN " + i,
-            "date of birth " + i,
-            "password " + i ,
-            new Button("add"),
-            new Button("edit"),
-            new Button("delete")));
+        table_dataa.add(new Books("Title " + i, "Subject " + i, "ISBN " + i, "date of birth " + i, "password " + i));
       }
       if(table_dataa.size()!=0) {
-        table_dataa.add(new Books("", "", "", "", " ",
-            new Button("add"),
-            new Button("edit"),
-            new Button("delete")));
+        table_dataa.add(new Books("", "", "", "", " "));
       }
 
       TableBookView.setItems(table_dataa);
@@ -178,12 +187,8 @@ public class AdminControl implements Initializable
     }
   }
   /*
-  * Students table initializer
+  * Students columns and data initializer
   * */
-  public void initTable(){
-    initCols();
-    loadData();
-  }
   private void initCols(){
     try{
       fullName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
@@ -191,85 +196,16 @@ public class AdminControl implements Initializable
       status.setCellValueFactory(new PropertyValueFactory<>("status"));
       dateOfBirth.setCellValueFactory(new PropertyValueFactory<>("dateOfBirth"));
       password.setCellValueFactory(new PropertyValueFactory<>("password"));
-      addButton.setCellValueFactory(new PropertyValueFactory<>("add"));
-      editButton.setCellValueFactory(new PropertyValueFactory<>("edit"));
-      deleteButton.setCellValueFactory(new PropertyValueFactory<>("delete"));
-      addButton();
-      editButton();
-      deleteButton();
     }
     catch (Exception e){
       System.out.println(e);
     }
   }
-  private void addButton(){
-    try
-    {
-
-    }catch (Exception e){
-      System.err.println(e);
-    }
+  public void deleteStudentHandler(ActionEvent event) {
   }
-  private void editButton(){
-    try
-    {
-
-      fullName.setCellFactory(TextFieldTableCell.forTableColumn());
-      fullName.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setFullName(e.getNewValue());
-      });
-      id.setCellFactory(TextFieldTableCell.forTableColumn());
-      id.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setId(e.getNewValue());
-      });
-      id.setCellFactory(TextFieldTableCell.forTableColumn());
-      id.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setStatus(e.getNewValue());
-      });
-      dateOfBirth.setCellFactory(TextFieldTableCell.forTableColumn());
-      dateOfBirth.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setDateOfBirth(e.getNewValue());
-      });
-      password.setCellFactory(TextFieldTableCell.forTableColumn());
-      password.setOnEditCommit(e-> {
-        e.getTableView().getItems().get(e.getTablePosition().getRow()).setPassword(e.getNewValue());
-      });
-      TableView.setEditable(true);
-    }
-    catch (Exception e){
-      System.err.println(e);
-    }
+  public void editStudentHandler(ActionEvent event) {
   }
-  private void deleteButton(){
-    try {
-//      deleteButton.setOnEditCommit(e -> {
-//        String fullName = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//        TableView.getItems().remove(fullName);
-//      });
-//      deleteButton.setOnEditCommit(e -> {
-//        String id = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//        TableView.getItems().remove(id);
-//      });
-//
-//      deleteButton.setOnEditCommit(e -> {
-//        String status = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//        TableView.getItems().remove(status);
-//      });
-//
-//      deleteButton.setOnEditCommit(e -> {
-//        String dateOfBirth = String.valueOf(TableView.getSelectionModel().getSelectedItem());
-//        TableView.getItems().remove(dateOfBirth);
-//      });
-      TableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-      ObservableList<Users> selectedRows = TableView.getSelectionModel().getSelectedItems();
-// we don't want to iterate on same collection on with we remove items
-      ArrayList<Users> rows = new ArrayList<>(selectedRows);
-      rows.forEach(row -> TableView.getItems().remove(row));
-    }
-    catch (Exception e) {
-      System.err.println(e);
-    }
-
+  public void addStudentHandler(ActionEvent event) {
   }
   public void loadData(){
     try{
@@ -280,16 +216,10 @@ public class AdminControl implements Initializable
             "Id " + i,
             "status " + i,
             "date of birth " + i,
-            "password " + i ,
-            new Button("add"),
-            new Button("edit"),
-            new Button("delete")));
+            "password " + i ));
       }
       if(table_data.size()!=0) {
-        table_data.add(new Users("", "", "", "", " ",
-            new Button("add"),
-            new Button("edit"),
-            new Button("delete")));
+        table_data.add(new Users("", "", "", "", " "));
       }
 
       TableView.setItems(table_data);
@@ -298,6 +228,28 @@ public class AdminControl implements Initializable
       System.err.println(e);
     }
   }
+  /*
+  * Librarian columns and data initializer
+  * */
+  private void initCols3(){
+    try{
+      fullName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
+      id.setCellValueFactory(new PropertyValueFactory<>("id"));
+      status.setCellValueFactory(new PropertyValueFactory<>("status"));
+      dateOfBirth.setCellValueFactory(new PropertyValueFactory<>("dateOfBirth"));
+      password.setCellValueFactory(new PropertyValueFactory<>("password"));
+    }
+    catch (Exception e){
+      System.out.println(e);
+    }
+  }
+  public void addLibraryHandler(ActionEvent event) {
+  }
+  public void editLibraryHandler(ActionEvent event) {
+  }
+  public void deleteLibraryHandler(ActionEvent event) {
+  }
+
   public void logoutHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/login.fxml"));
     Stage stage = (Stage) logout.getScene().getWindow();
@@ -322,7 +274,6 @@ public class AdminControl implements Initializable
 //    students.initialize(root,resourceBundle);
     stage.show();
   }
-
   public void librarianHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/admin/librarian_management.fxml"));
     Stage stage = (Stage) librarian.getScene().getWindow();
@@ -330,7 +281,6 @@ public class AdminControl implements Initializable
     stage.setScene(new Scene(root, 850, 600));
     stage.show();
   }
-
   public void backHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/admin/main_menu.fxml"));
     Stage stage = (Stage) back.getScene().getWindow();

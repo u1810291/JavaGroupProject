@@ -17,26 +17,31 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <TableView layoutX="20.0" layoutY="167.0" prefHeight="415.0" prefWidth="814.0">
+      <TableView layoutX="20.0" layoutY="167.0" prefHeight="371.0" prefWidth="814.0">
         <columns>
-          <TableColumn prefWidth="95.00000762939453" text="Id" />
-          <TableColumn prefWidth="163.0" text="Name" />
-            <TableColumn prefWidth="114.0" text="Password" />
-            <TableColumn prefWidth="84.0" text="Id" />
-            <TableColumn prefWidth="132.0" text="Date of birth" />
-            <TableColumn prefWidth="78.0" text="Add" />
-            <TableColumn prefWidth="77.0" text="Edit" />
-            <TableColumn prefWidth="72.0" text="Delete" />
+          <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Id" />
+          <TableColumn maxWidth="280.0" minWidth="280.0" prefWidth="280.0" text="Name" />
+            <TableColumn maxWidth="110.0" minWidth="110.0" prefWidth="110.0" text="Status" />
+            <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Password" />
+            <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Date of birth" />
         </columns>
       </TableView>
-      <Label layoutX="210.0" layoutY="137.0" text="Back" textFill="WHITE">
+      <Label layoutX="212.0" layoutY="134.0" text="Back" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Label layoutX="578.0" layoutY="137.0" text="Logout" textFill="WHITE">
+      <Label layoutX="582.0" layoutY="133.0" text="Logout" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
+      <Button fx:id="deleteLibrary" layoutX="762.0" layoutY="564.0" mnemonicParsing="false" onAction="#deleteLibraryHandler" prefHeight="25.0" prefWidth="70.0" text="delete" />
+      <TextField fx:id="idLibraryText" layoutX="20.0" layoutY="539.0" prefHeight="25.0" prefWidth="141.0" promptText="id" />
+      <TextField fx:id="statusLibraryText" layoutX="442.0" layoutY="539.0" prefHeight="25.0" prefWidth="110.0" promptText="status" />
+      <TextField fx:id="passwordLibraryText" layoutX="552.0" layoutY="539.0" prefHeight="25.0" prefWidth="140.0" promptText="password" />
+      <TextField fx:id="dateOfBirthLibraryText" layoutX="692.0" layoutY="539.0" prefHeight="25.0" prefWidth="141.0" promptText="date of birth" />
+      <TextField fx:id="fullNameLibraryText" layoutX="161.0" layoutY="539.0" prefHeight="25.0" prefWidth="281.0" promptText="full name" />
+      <Button fx:id="addLibrary" layoutX="605.0" layoutY="564.0" mnemonicParsing="false" onAction="#addLibraryHandler" prefHeight="25.0" prefWidth="70.0" text="add" />
+      <Button fx:id="editLibrary" layoutX="684.0" layoutY="564.0" mnemonicParsing="false" onAction="#editLibraryHandler" prefHeight="25.0" prefWidth="70.0" text="edit" />
    </children>
 </AnchorPane>

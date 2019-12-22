@@ -6,21 +6,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.StudentControl">
    <children>
       <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
          <image>
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Text layoutX="27.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="current status" wrappingWidth="236.13671875">
+      <Text layoutX="33.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current status" wrappingWidth="236.13671875">
          <font>
-            <Font size="36.0" />
+            <Font size="24.0" />
          </font>
       </Text>
-      <VBox layoutX="42.0" layoutY="226.0" prefHeight="117.0" prefWidth="159.0" spacing="10.0">
+      <VBox layoutX="44.0" layoutY="275.0" prefHeight="117.0" prefWidth="159.0" spacing="10.0">
          <children>
-            <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="active" textFill="#0a9e3e">
+            <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Active" textFill="#0a9e3e">
                <font>
                   <Font size="18.0" />
                </font>
@@ -28,7 +28,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" prefHeight="23.0" prefWidth="128.0" text="blocked" textFill="#da1f1f">
+            <CheckBox mnemonicParsing="false" prefHeight="23.0" prefWidth="128.0" text="Blocked" textFill="#da1f1f">
                <font>
                   <Font size="18.0" />
                </font>
@@ -36,7 +36,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="138.0" text="issued a fine" textFill="#e44040">
+            <CheckBox mnemonicParsing="false" prefHeight="27.0" prefWidth="147.0" text="Issued a fine" textFill="#e44040">
                <font>
                   <Font size="18.0" />
                </font>
@@ -50,13 +50,23 @@
          <children>
             <TableView prefHeight="396.0" prefWidth="572.0">
               <columns>
-                <TableColumn prefWidth="108.0" text="borrowed books" />
-                <TableColumn prefWidth="96.0" text="title" />
-                  <TableColumn prefWidth="136.0" text="date of issue" />
-                  <TableColumn prefWidth="136.0" text="date of return" />
+                <TableColumn prefWidth="108.0" text="Borrowed books" />
+                <TableColumn prefWidth="96.0" text="Title" />
+                  <TableColumn prefWidth="136.0" text="Date of issue" />
+                  <TableColumn prefWidth="136.0" text="Date of return" />
               </columns>
             </TableView>
          </children>
       </VBox>
+      <Button fx:id="profile" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="60.0" mnemonicParsing="false" onAction="#profileHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="60.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
+      <Label layoutX="199.0" layoutY="137.0" text="Reserve" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="578.0" layoutY="137.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
    </children>
 </AnchorPane>

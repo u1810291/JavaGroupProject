@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Dec 22 20:26:07 UZT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): instance a816c00e-016f-2e37-3485-0000061dbf38 
+on database directory C:\Users\User\IdeaProjects\JavaGroupProject2\database  with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@35f983a6 
+Loaded from file:/C:/Program%20Files/Java/jdk1.7.0_79/db/lib/derby.jar
+java.vendor=Amazon.com Inc.
+java.runtime.version=11.0.5+10-LTS
+user.dir=C:\Users\User\IdeaProjects\JavaGroupProject2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
