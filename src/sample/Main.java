@@ -11,7 +11,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Main extends Application {
+public class Main extends Application
+{
 //    final String SELECT_QUERY = "SELECT * FROM TITLES";
 //    Statement stmt = null;
     @Override
@@ -23,20 +24,19 @@ public class Main extends Application {
         primaryStage.show();
     }
     public static void main(String[] args) {
-//        final String SELECT_QUERY = "SELECT * FROM AUTHORS";
-//        try {
-//            Connection conn;
-//            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-//            String dbURL = "jdbc:derby:books;create=true;";
-//            String user = "deitel";
-//            String password = "deitel";
-//            conn = DriverManager.getConnection(dbURL, user, password);
-//            System.out.println("Connected");
-//        }catch (ClassNotFoundException | SQLException e){
-//            e.printStackTrace();
-//        }
-
-        launch(args);
+        final String SELECT_QUERY = "SELECT * FROM AUTHORS";
+        try {
+            Connection conn;
+            Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+            String dbURL = "jdbc:derby:books;";
+            String user = "deitel";
+            String password = "deitel";
+            conn = DriverManager.getConnection(dbURL, user, password);
+            System.out.println("Connected");
+        }catch (ClassNotFoundException | SQLException e){
+            e.printStackTrace();
+        }
+//        launch(args);
     }
 }
 

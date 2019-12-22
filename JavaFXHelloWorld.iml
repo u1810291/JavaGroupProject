@@ -10,5 +10,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="javafx-sdk-11.0" level="application" />
     <orderEntry type="library" name="jdk1.8" level="application" />
+    <orderEntry type="library" name="derby" level="application" />
   </component>
 </module>
