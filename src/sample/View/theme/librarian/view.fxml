@@ -12,30 +12,40 @@
             <Image url="@../images/book.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="logout" />
-      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="back" />
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
+      <Button fx:id="back" alignment="BOTTOM_CENTER" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onAction="#backHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" />
       <TableView layoutX="17.0" layoutY="255.0" prefHeight="306.0" prefWidth="819.0">
         <columns>
-          <TableColumn prefWidth="347.0" text="all books" />
-            <TableColumn prefWidth="373.0" text="student id" />
+          <TableColumn prefWidth="347.0" text="All books" />
+            <TableColumn prefWidth="373.0" text="Student Id" />
         </columns>
       </TableView>
       <TextField fx:id="searchTextField" layoutX="24.0" layoutY="167.0" prefHeight="39.0" prefWidth="243.0" promptText="search" />
       <HBox layoutX="17.0" layoutY="216.0" prefHeight="39.0" prefWidth="674.0" spacing="5.0">
          <children>
-            <CheckBox fx:id="borrowedBooks" mnemonicParsing="false" prefHeight="36.0" prefWidth="117.0" text="borrowed books" />
-            <CheckBox fx:id="overdue" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="73.0" text="overdue" />
-            <CheckBox fx:id="title" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="51.0" text="title" />
-            <CheckBox fx:id="subject" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="64.0" text="subject" />
-            <CheckBox fx:id="authors" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" text="author" />
+            <CheckBox fx:id="borrowedBooks" mnemonicParsing="false" prefHeight="36.0" prefWidth="117.0" text="Borrowed books" />
+            <CheckBox fx:id="overdue" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="73.0" text="Overdue" />
+            <CheckBox fx:id="title" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="51.0" text="Title" />
+            <CheckBox fx:id="subject" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="64.0" text="Subject" />
+            <CheckBox fx:id="authors" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" text="Author" />
             <CheckBox fx:id="ISBN" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" text="ISBN" />
-            <CheckBox fx:id="publishDate" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="91.0" text="publish date" />
+            <CheckBox fx:id="publishDate" lineSpacing="100.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="91.0" text="Publish date" />
          </children>
       </HBox>
-      <Button fx:id="applySearch" layoutX="575.0" layoutY="167.0" mnemonicParsing="false" onAction="#bookViewApply" prefHeight="39.0" prefWidth="232.0" style="-fx-background-color: #339933;" text="apply" textFill="WHITE">
+      <Button fx:id="applySearch" layoutX="575.0" layoutY="167.0" mnemonicParsing="false" onAction="#bookViewApply" prefHeight="39.0" prefWidth="232.0" style="-fx-background-color: #339933;" text="Apply" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <Label layoutX="210.0" layoutY="137.0" text="Back" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="579.0" layoutY="137.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

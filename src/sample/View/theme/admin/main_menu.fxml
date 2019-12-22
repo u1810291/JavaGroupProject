@@ -13,24 +13,42 @@
             <Image url="@/sample/View/theme/images/main_menu.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="librarian" alignment="BOTTOM_LEFT" layoutX="83.0" layoutY="263.0" mnemonicParsing="false" onAction="#librarianHandler" opacity="0.11" prefHeight="134.0" prefWidth="186.0" text="        Librarian" textFill="#030303">
+      <Button fx:id="librarian" alignment="BOTTOM_LEFT" layoutX="83.0" layoutY="263.0" mnemonicParsing="false" onAction="#librarianHandler" opacity="0.11" prefHeight="134.0" prefWidth="186.0" textFill="#030303">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>
-      <Button fx:id="studentButton" alignment="BOTTOM_LEFT" layoutX="333.0" layoutY="260.0" mnemonicParsing="false" onAction="#studentButtonHandler" opacity="0.11" prefHeight="140.0" prefWidth="186.0" text="         Student">
+      <Button fx:id="studentButton" alignment="BOTTOM_LEFT" layoutX="333.0" layoutY="260.0" mnemonicParsing="false" onAction="#studentButtonHandler" opacity="0.11" prefHeight="140.0" prefWidth="186.0" text="     ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Button>
-      <Button fx:id="bookButton" alignment="BOTTOM_LEFT" layoutX="581.0" layoutY="260.0" mnemonicParsing="false" onAction="#bookButtonHandler" opacity="0.11" prefHeight="134.0" prefWidth="186.0" text="            Book">
+      <Button fx:id="bookButton" alignment="BOTTOM_LEFT" layoutX="581.0" layoutY="260.0" mnemonicParsing="false" onAction="#bookButtonHandler" opacity="0.11" prefHeight="134.0" prefWidth="186.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
          <opaqueInsets>
             <Insets />
          </opaqueInsets></Button>
-      <Button fx:id="logout" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" text="Logout">
+      <Button fx:id="logout" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="555.0" layoutY="63.0" mnemonicParsing="false" onAction="#logoutHandler" opacity="0.15" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
+      <Label layoutX="578.0" layoutY="137.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="376.0" text="Librarian" textFill="#fcf7f7">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="376.0" text="Student" textFill="#f2f0f0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="657.0" layoutY="377.0" text="Book" textFill="#fcf9f9">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
    </children>
 </AnchorPane>
