@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.StudentControl">
    <children>
       <ImageView fitHeight="606.0" fitWidth="865.0" layoutX="-5.0" layoutY="-2.0">
          <image>
@@ -58,5 +58,7 @@
             </TableView>
          </children>
       </VBox>
+      <Button fx:id="profile" layoutX="177.0" layoutY="79.0" mnemonicParsing="false" onAction="#profileHandler" prefHeight="86.0" prefWidth="104.0" text="See profile" />
+      <Button fx:id="logout" layoutX="553.0" layoutY="79.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="86.0" prefWidth="104.0" text="Logout" />
    </children>
 </AnchorPane>
