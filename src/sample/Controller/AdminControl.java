@@ -109,7 +109,7 @@ public class AdminControl implements Initializable
    * */
   public void initTable(){
     initCols();
-    loadData();
+//    loadData();
     initCols2();
     loadData2();
     initCols3();

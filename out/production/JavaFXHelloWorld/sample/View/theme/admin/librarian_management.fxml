@@ -30,18 +30,19 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label layoutX="585.0" layoutY="133.0" text="Logout" textFill="WHITE">
+      <Label layoutX="585.0" layoutY="135.0" text="Logout" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <Button fx:id="deleteLibrary" layoutX="762.0" layoutY="564.0" mnemonicParsing="false" onAction="#deleteLibraryHandler" prefHeight="25.0" prefWidth="71.0" text="delete" />
       <TextField fx:id="idLibraryText" layoutX="20.0" layoutY="539.0" prefHeight="25.0" prefWidth="141.0" promptText="id" />
-      <TextField fx:id="statusLibraryText" layoutX="442.0" layoutY="539.0" prefHeight="25.0" prefWidth="110.0" promptText="status" />
       <TextField fx:id="passwordLibraryText" layoutX="552.0" layoutY="539.0" prefHeight="25.0" prefWidth="140.0" promptText="password" />
-      <TextField fx:id="dateOfBirthLibraryText" layoutX="692.0" layoutY="539.0" prefHeight="25.0" prefWidth="141.0" promptText="date of birth" />
       <TextField fx:id="fullNameLibraryText" layoutX="161.0" layoutY="539.0" prefHeight="25.0" prefWidth="281.0" promptText="full name" />
       <Button fx:id="addLibrary" layoutX="620.0" layoutY="564.0" mnemonicParsing="false" onAction="#addLibraryHandler" prefHeight="25.0" prefWidth="72.0" text="add" />
       <Button fx:id="editLibrary" layoutX="692.0" layoutY="564.0" mnemonicParsing="false" onAction="#editLibraryHandler" prefHeight="25.0" prefWidth="70.0" text="edit" />
+      <ChoiceBox prefWidth="150.0" />
+      <ComboBox layoutX="442.0" layoutY="539.0" prefWidth="110.0" promptText="Available" />
+      <DatePicker layoutX="692.0" layoutY="539.0" prefWidth="140.0" />
    </children>
 </AnchorPane>
