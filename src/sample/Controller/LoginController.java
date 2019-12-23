@@ -23,6 +23,7 @@ public class LoginController {
       Stage stage = (Stage) login.getScene().getWindow();
       stage.close();
       stage.setScene(new Scene(root, 850 ,600));
+      stage.setTitle("Admin");
       stage.show();
     }
     else if (login.getText().equals("student") && password.getText().equals("2")){
@@ -30,6 +31,7 @@ public class LoginController {
       Stage stage = (Stage) login.getScene().getWindow();
       stage.close();
       stage.setScene(new Scene(root, 850 ,600));
+      stage.setTitle("Student");
       stage.show();
     }
     else if (login.getText().equals("librarian") && password.getText().equals("3")){
@@ -37,6 +39,7 @@ public class LoginController {
       Stage stage = (Stage) login.getScene().getWindow();
       stage.close();
       stage.setScene(new Scene(root, 850 ,600));
+      stage.setTitle("Librarian");
       stage.show();
     }
   }

@@ -22,7 +22,7 @@
           <TableColumn fx:id="title" maxWidth="190.0" minWidth="190.0" prefWidth="190.0" text="Title" />
           <TableColumn fx:id="subject" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Subject" />
            <TableColumn fx:id="author" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Author" />
-           <TableColumn fx:id="statusBook" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text="Status" />
+           <TableColumn fx:id="statusBook" maxWidth="80.0" minWidth="80.0" prefWidth="81.0" text="Status" />
            <TableColumn fx:id="ISBN" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="ISBN" />
             <TableColumn fx:id="publishDate" maxWidth="135.0" minWidth="135.0" prefWidth="135.0" text="Publish date" />
         </columns>

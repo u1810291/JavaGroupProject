@@ -59,7 +59,7 @@ public class LibrarianControl implements Initializable {
   @FXML private TableColumn<Users, String> studentName;
   @Override
   public void initialize(URL url, ResourceBundle resourceBundle) {
-    initCols();
+//    initCols();
   }
   public void initCols(){
     datesIssue.setCellValueFactory(new PropertyValueFactory<>("datesIssue"));
@@ -68,10 +68,7 @@ public class LibrarianControl implements Initializable {
     booksStatus.setCellValueFactory(new PropertyValueFactory<>("booksStatus"));
     studentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
     studentName.setCellValueFactory(new PropertyValueFactory<>("studentName"));
-
   }
-
-
   public void monthlyReportHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/report.fxml"));
     Stage stage = (Stage) monthlyReport.getScene().getWindow();
@@ -81,7 +78,7 @@ public class LibrarianControl implements Initializable {
   }
   public void issueBlockHandler(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/sample/View/theme/librarian/block_issue.fxml"));
-    Stage stage = (Stage) issueBook.getScene().getWindow();
+    Stage stage = (Stage) issueBlock.getScene().getWindow();
     stage.close();
     stage.setTitle("Issue Book");
     stage.setScene(new Scene(root, 850 ,600));

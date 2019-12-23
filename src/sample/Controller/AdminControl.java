@@ -4,6 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
+import org.apache.derby.catalog.types.UserDefinedTypeIdImpl;
 import sample.Database.DatabaseHandler;
 import sample.Model.Users;
 import javafx.scene.Scene;
@@ -27,37 +28,43 @@ public class AdminControl implements Initializable
   /*
   * Librarian buttons and text fields
   * */
-  public Button addLibrary;
-  public Button editLibrary;
-  public Button deleteLibrary;
-  public TextField idLibraryText;
-  public TextField statusLibraryText;
-  public TextField passwordLibraryText;
-  public TextField dateOfBirthLibraryText;
-  public TextField fullNameLibraryText;
+  @FXML private Button addLibrary;
+  @FXML private Button editLibrary;
+  @FXML private Button deleteLibrary;
+  @FXML private TextField idLibraryText;
+  @FXML private TextField statusLibraryText;
+  @FXML private TextField passwordLibraryText;
+  @FXML private TextField dateOfBirthLibraryText;
+  @FXML private TextField fullNameLibraryText;
   /*
   * Books buttons and text fields
   * */
-  public Button addBook;
-  public Button editBook;
-  public Button deleteBook;
-  public TextField titleBook;
-  public TextField subjectBook;
-  public TextField authorBook;
-  public TextField isbnBookText;
+  @FXML private Button addBook;
+  @FXML private Button editBook;
+  @FXML private Button deleteBook;
+  @FXML private TextField titleBook;
+  @FXML private TextField subjectBook;
+  @FXML private TextField authorBook;
+  @FXML private TextField isbnBookText;
   /*
   * Student buttons and text fields
   * */
-  public Button addStudent;
-  public Button editStudent;
-  public Button deleteStudent;
-  public TextField passwordStudent;
-  public TextField dateOfBirthStudent;
-  public TextField statusStudent;
-  public TextField idStudent;
-  public TextField fullNameStudent;
-  public TextField publishBookText1;
-  public TextField statusB;
+  @FXML private Button addStudent;
+  @FXML private Button editStudent;
+  @FXML private Button deleteStudent;
+  @FXML private TextField passwordStudent;
+  @FXML private TextField dateOfBirthStudent;
+  @FXML private TextField statusStudent;
+  @FXML private TextField idStudent;
+  @FXML private TextField fullNameStudent;
+  @FXML private TextField publishBookText1;
+  @FXML private TextField statusB;
+  @FXML private TableView<User> TableViewLibrarian;
+  @FXML private TableColumn<User, String> idLibrary;
+  @FXML private TableColumn<User, String> fullNameLibrary;
+  @FXML private TableColumn<User, String> statusLibrary;
+  @FXML private TableColumn<User, String> passwordLibrary;
+  @FXML private TableColumn<User, String> dateOfBirthLibrary;
   /*
   * Pages buttons
   * */
@@ -69,12 +76,12 @@ public class AdminControl implements Initializable
   /*
   * Users table (librarians and students)
   * */
-  @FXML private TableView<Users> TableView;
-  @FXML private TableColumn<Users, String> fullName;
-  @FXML private TableColumn<Users, String> id;
-  @FXML private TableColumn<Users, String> statusT;
-  @FXML private TableColumn<Users, String> dateOfBirth;
-  @FXML private TableColumn<Users, String> password;
+  @FXML private TableView<User> TableView;
+  @FXML private TableColumn<User, String> fullName;
+  @FXML private TableColumn<User, String> id;
+  @FXML private TableColumn<User, String> status;
+  @FXML private TableColumn<User, String> dateOfBirth;
+  @FXML private TableColumn<User, String> password;
   /*
   * Books table properties
   * */
@@ -96,8 +103,6 @@ public class AdminControl implements Initializable
   public void initialize(URL url, ResourceBundle resourceBundle) {
     initTable();
     handler = new DatabaseHandler();
-    checkData1();
-    checkData2();
   }
   /*
    * Columns and data initializers
@@ -110,13 +115,11 @@ public class AdminControl implements Initializable
     initCols3();
     loadData3();
   }
-
   /*
   * Books table initializer
   * */
-  public class Book{
-
-    private SimpleStringProperty  title, subject, author, status, ISBN, publishDate;
+  public static class Book{
+    private final SimpleStringProperty  title, subject, author, status, ISBN, publishDate;
     Book(String t, String s, String a, String stat, String i, String p){
       this.title = new SimpleStringProperty(t);
       this.subject = new SimpleStringProperty(s);
@@ -160,18 +163,6 @@ public class AdminControl implements Initializable
   }
   public void editBookHandler(ActionEvent event) {
   }
-  public void checkData1(){
-    String qu = "SELECT title FROM BOOKS";
-    ResultSet rs = handler.execQuery(qu);
-    try {
-      while (rs.next()){
-        String tit = rs.getString("title");
-        System.out.println(tit);;
-      }
-    } catch (Exception e) {
-      System.out.println(e);
-    }
-  }
   public void addBookHandler(ActionEvent event) {
     String title = titleBook.getText();
     String subject = subjectBook.getText();
@@ -208,7 +199,6 @@ public class AdminControl implements Initializable
       alert.setContentText("Failed");
       alert.showAndWait();
     }
-
   }
   public void deleteBookHandler(ActionEvent event) {
   }
@@ -220,12 +210,11 @@ public class AdminControl implements Initializable
       while (rs.next()){
         String tit = rs.getString("title");
         String sub = rs.getString("subject");
-        String isbn = rs.getString("ISBN");
-        String sta = rs.getString("status");
         String auth = rs.getString("author");
-        String pub = rs.getString("published date");
-
-        list.add(new Book(tit, sub, isbn, sta, auth, pub));
+        String sta = rs.getString("status");
+        String isbn = rs.getString("ISBN");
+        String pub = rs.getString("publishDate");
+        list.add(new Book(tit, sub, auth, sta, isbn, pub));
       }
     }
     catch (Exception e){
@@ -236,14 +225,15 @@ public class AdminControl implements Initializable
   /*
   * Students columns and data initializer
   * */
-  public class User{
-    private SimpleStringProperty fullName, id, status , dateOfBirth, password;
+  public static class User{
+    private final SimpleStringProperty fullName, id, status , dateOfBirth, password;
+//    fname, ids,stat,date,pass
     User(String f, String i, String s, String d, String p){
-      this.fullName = new SimpleStringProperty(f);
       this.id = new SimpleStringProperty(i);
+      this.fullName = new SimpleStringProperty(f);
       this.status = new SimpleStringProperty(s);
-      this.dateOfBirth = new SimpleStringProperty(d);
       this.password = new SimpleStringProperty(p);
+      this.dateOfBirth = new SimpleStringProperty(d);
     }
     public String getFullName() {
       return fullName.get();
@@ -265,7 +255,7 @@ public class AdminControl implements Initializable
     try{
       fullName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
       id.setCellValueFactory(new PropertyValueFactory<>("id"));
-      statusT.setCellValueFactory(new PropertyValueFactory<>("status"));
+      status.setCellValueFactory(new PropertyValueFactory<>("status"));
       dateOfBirth.setCellValueFactory(new PropertyValueFactory<>("dateOfBirth"));
       password.setCellValueFactory(new PropertyValueFactory<>("password"));
     }
@@ -279,11 +269,11 @@ public class AdminControl implements Initializable
   }
   public void addStudentHandler(ActionEvent event) {
 //    fullName, id, status , dateOfBirth, password
-    String fname = fullName.getText();
-    String ids = id.getText();
+    String fname = fullNameStudent.getText();
+    String ids = idStudent.getText();
     String status = statusStudent.getText();
-    String date = dateOfBirth.getText();
-    String pass = password.getText();
+    String date = dateOfBirthStudent.getText();
+    String pass = passwordStudent.getText();
     if (fname.isEmpty() || ids.isEmpty() ||  status.isEmpty() || date.isEmpty() || pass.isEmpty()){
       Alert alert = new Alert(AlertType.ERROR);
       alert.setHeaderText(null);
@@ -291,13 +281,12 @@ public class AdminControl implements Initializable
       alert.showAndWait();
       return;
     }
-
     String qu = "INSERT INTO USERS VALUES ("+
-        "'" + fullName + "', " +
-        "'" + id + "', " +
+        "'" + fname + "', " +
+        "'" + ids + "', " +
         "'" + status + "', " +
-        "'" + dateOfBirth + "'," +
-        "'" + password + "'" +
+        "'" + date + "', " +
+        "'" + pass + "'" +
         ")";
     System.out.println(qu);
     if (handler.execAction(qu)){
@@ -320,38 +309,19 @@ public class AdminControl implements Initializable
     ResultSet rs = handler.execQuery(qu);
     try{
       while (rs.next()){
-        String fname = rs.getString("full name");
         String ids = rs.getString("id");
+        String fname = rs.getString("fullName");
         String stat = rs.getString("status");
-        String date = rs.getString("date of birth");
         String pass = rs.getString("password");
-        list2.add(new User(fname,ids,stat,date,pass));
+        String date = rs.getString("dateOfBirth");
+        list2.add(new User( fname, ids,stat,date,pass));
       }
     }
     catch (Exception e){
       System.err.println(e);
       e.printStackTrace();
     }
-    TableBookView.getItems().setAll(list);
-
-  }
-  public void checkData2(){
-    String qu = "SELECT title FROM USERS";
-    ResultSet rs = handler.execQuery(qu);
-    try {
-      while (rs.next()){
-        String nam = rs.getString("name");
-        System.out.println(nam);;
-      }
-    } catch (Exception e) {
-      System.out.println(e);
-      Alert alert = new Alert(AlertType.ERROR);
-      alert.setHeaderText(null);
-      alert.setContentText(e.getMessage());
-      alert.showAndWait();
-      e.printStackTrace();
-      return;
-    }
+    TableView.getItems().setAll(list2);
   }
   /*
   * Librarian columns and data initializer
@@ -360,7 +330,7 @@ public class AdminControl implements Initializable
     try{
       fullName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
       id.setCellValueFactory(new PropertyValueFactory<>("id"));
-      statusT.setCellValueFactory(new PropertyValueFactory<>("status"));
+      status.setCellValueFactory(new PropertyValueFactory<>("status"));
       dateOfBirth.setCellValueFactory(new PropertyValueFactory<>("dateOfBirth"));
       password.setCellValueFactory(new PropertyValueFactory<>("password"));
     }
@@ -385,11 +355,11 @@ public class AdminControl implements Initializable
     }
 
     String qu = "INSERT INTO USERS VALUES ("+
-        "'" + fullNameLibraryText + "', " +
-        "'" + idLibraryText + "', " +
-        "'" + statusT + "', " +
-        "'" + dateOfBirth + "'," +
-        "'" + password + "'" +
+        "'" + fname + "', " +
+        "'" + ids + "', " +
+        "'" + status + "', " +
+        "'" + date + "'," +
+        "'" + pass + "'" +
         ")";
     System.out.println(qu);
     if (handler.execAction(qu)){
